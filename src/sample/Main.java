@@ -221,7 +221,9 @@ public class Main extends Application {
     public void start(Stage stage) {
 
         BorderPane borderPane = new BorderPane();
-        HBox hbox = new HBox();
+
+        /*<--------------------> Gauges HBox <--------------------> */
+        HBox hboxGauges = new HBox();
 
         Button testButton = new Button("Testing");
         testButton.addEventHandler(ActionEvent.ACTION,
@@ -243,10 +245,10 @@ public class Main extends Application {
         cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> tempGauge.setValue(0));
         cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> RPMGauge.setValue(0));
 
-        hbox.getChildren().addAll(fuelGauge, fSpeedGauge, RPMGauge, tempGauge, testButton, cancelButton);
-        hbox.setPadding(new Insets(15, 12, 15, 0));
-        hbox.setSpacing(10);
-        hbox.setStyle("-fx-background-color: indianred");
+        hboxGauges.getChildren().addAll(fuelGauge, fSpeedGauge, RPMGauge, tempGauge);
+        hboxGauges.setPadding(new Insets(15, 12, 15, 0));
+        hboxGauges.setSpacing(10);
+        hboxGauges.setStyle("-fx-background-color: indianred");
 
         HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
         HBox.setHgrow(fuelGauge, Priority.ALWAYS);
@@ -255,9 +257,16 @@ public class Main extends Application {
         HBox.setHgrow(testButton, Priority.ALWAYS);
         HBox.setHgrow(cancelButton, Priority.ALWAYS);
 
-        hbox.setAlignment(Pos.CENTER);
+        hboxGauges.setAlignment(Pos.CENTER);
 
-        borderPane.setTop(hbox);
+        /*<--------------------> Test buttons HBox <--------------------> */
+        HBox hboxTestButtons = new HBox();
+        hboxTestButtons.setSpacing(10);
+        hboxTestButtons.getChildren().addAll(testButton, cancelButton);
+        hboxGauges.setStyle("-fx-background-color: indianred");
+
+        borderPane.setCenter(hboxGauges);
+        borderPane.setTop(hboxTestButtons);
 
         Scene scene = new Scene(borderPane);
         stage.setTitle("Telemetry System");
