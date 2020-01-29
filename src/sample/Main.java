@@ -1,27 +1,11 @@
 package sample;
 
-import eu.hansolo.medusa.FGauge;
-import eu.hansolo.medusa.FGaugeBuilder;
-import eu.hansolo.medusa.Gauge;
-import eu.hansolo.medusa.Gauge.KnobType;
-import eu.hansolo.medusa.Gauge.LedType;
-import eu.hansolo.medusa.Gauge.NeedleShape;
-import eu.hansolo.medusa.Gauge.NeedleSize;
-import eu.hansolo.medusa.Gauge.ScaleDirection;
-import eu.hansolo.medusa.GaugeBuilder;
-import eu.hansolo.medusa.GaugeDesign;
+import eu.hansolo.medusa.*;
+import eu.hansolo.medusa.Gauge.*;
 import eu.hansolo.medusa.GaugeDesign.GaugeBackground;
-import eu.hansolo.medusa.LcdDesign;
-import eu.hansolo.medusa.LcdFont;
-import eu.hansolo.medusa.Marker;
 import eu.hansolo.medusa.Marker.MarkerType;
-import eu.hansolo.medusa.MarkerBuilder;
-import eu.hansolo.medusa.Section;
-import eu.hansolo.medusa.SectionBuilder;
-import eu.hansolo.medusa.TickLabelLocation;
-import eu.hansolo.medusa.TickLabelOrientation;
-import eu.hansolo.medusa.TickMarkType;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -32,25 +16,15 @@ import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 
 import java.util.Random;
-import java.util.stream.IntStream;
 
 public class Main extends Application {
     private static final Random RND = new Random();
-    private Gauge gauge;
-    private FGauge fGauge;
+    private Gauge fuelGauge, RPMGauge, tempGuage;
+    private FGauge fRPMGauge;
 
     @Override
     public void init() {
 
-        /**
-         *  Definition of Sections that can be used for
-         *  - Sections
-         *  - Areas
-         *  - TickMarkSections
-         *  - TickLabelSections
-         *
-         *  Sections will be checked against current value if gauge.getCheckSectionsForValue == true
-         */
         Section section1 = SectionBuilder.create()
                 .start(50)
                 .stop(75)
@@ -66,17 +40,7 @@ public class Main extends Application {
                 .onSectionEntered(sectionEvent -> System.out.println("Entered Section 2"))
                 .onSectionLeft(sectionEvent -> System.out.println("Left Section 2"))
                 .build();
-        /**
-         *  Definition of Markers
-         *  You can attach a listener for the following event types
-         *  - MARKER_PRESSED
-         *  - MARKER_RELEASED
-         *  - MARKER_EXCEEDED
-         *  - MARKER_UNDERRUN
-         *  via the MarkerBuilder
-         *  To receive MARKER_EXCEEDED and MARKER_UNDERRUN events you have to check the
-         *  current value against each marker by calling the markers checkForValue() method
-         */
+
         Marker marker1 = MarkerBuilder.create()
                 .value(25)
                 .text("Marker 1")
@@ -95,10 +59,8 @@ public class Main extends Application {
                 .onMarkerReleased(markerEvent -> System.out.println("Marker 2 released"))
                 .build();
 
-        /**
-         *  Create the Medusa Gauge with most of it's options
-         */
-        gauge = GaugeBuilder.create()
+        // RPM Gauge parameters
+        RPMGauge = GaugeBuilder.create()
                 .prefSize(500, 500)                                                                  // Set the preferred size of the control
                 // Related to Foreground Elements
                 .foregroundBaseColor(Color.WHITE)                                                   // Defines a color for title, subtitle, unit, value, tick label, tick mark, major tick mark, medium tick mark and minor tick mark
@@ -125,7 +87,7 @@ public class Main extends Application {
                 .onlyFirstAndLastTickLabelVisible(false)                                            // Define if only the first and last tick label should be visible
                 .tickLabelSectionsVisible(false)                                                    // Define if sections for tick labels should be visible
                 .tickLabelSections(section1, section2)                                              // Define sections to color tick labels
-                .tickLabelColor(Color.BLACK)                                                        // Define the color for tick labels (overridden by tick label sections)
+                .tickLabelColor(Color.WHITE)                                                        // Define the color for tick labels (overridden by tick label sections)
                 // Related to Tick Marks
                 .tickMarkSectionsVisible(false)                                                     // Define if sections for tick marks should be visible
                 .tickMarkSections(section1, section2)                                               // Define sections to color tick marks
@@ -153,7 +115,7 @@ public class Main extends Application {
                 // Related to Knob
                 .knobType(KnobType.METAL)                                                           // Defines the type for the center knob (STANDARD, PLAIN, METAL, FLAT)
                 .knobColor(Color.LIGHTGRAY)                                                         // Defines the color that should be used for the center knob
-                .interactive(false)                                                                 // Defines if it should be possible to press the center knob
+                .interactive(true)                                                                 // Defines if it should be possible to press the center knob
                 .onButtonPressed(buttonEvent -> System.out.println("Knob pressed"))                 // Defines a handler that will be triggered when the center knob was pressed
                 .onButtonReleased(buttonEvent -> System.out.println("Knob released"))               // Defines a handler that will be triggered when the center knob was released
                 // Related to Threshold
@@ -178,75 +140,92 @@ public class Main extends Application {
                 .animationDuration(500)                                                             // Defines the speed of the needle in milliseconds (10 - 10000 ms)
                 .build();
 
-        /**
-         *  Create a gauge with a frame and background that utilizes a Medusa gauge
-         *  You can choose between the following GaugeDesigns
-         *  - METAL
-         *  - TILTED_GRAY
-         *  - STEEL
-         *  - BRASS
-         *  - GOLD
-         *  - BLACK_METAL
-         *  - SHINY_METAL
-         *  - ENZO
-         *  - FLAT (when used one could set the frame color by calling GaugeDesign.FLAT.frameColor = Color.ORANGE;)
-         *  - TRANSPARENT
-         *
-         *  and the following GaugeBackgrounds
-         *  - DARK_GRAY
-         *  - BEIGE
-         *  - ANTHRACITE
-         *  - LIGHT_GRAY
-         *  - WHITE
-         *  - BLACK
-         *  - CARBON
-         *  - TRANSPARENT
-         */
-        fGauge = FGaugeBuilder
+        fRPMGauge = FGaugeBuilder
                 .create()
                 .prefSize(500, 500)
-                .gauge(gauge)
+                .gauge(RPMGauge)
                 .gaugeDesign(GaugeDesign.METAL)
                 .gaugeBackground(GaugeBackground.CARBON)
                 .foregroundVisible(true)
                 .build();
 
+        fuelGauge = GaugeBuilder.create()
+                .skinType(SkinType.HORIZONTAL)
+                .prefSize(300, 250)
+                .knobColor(Color.rgb(0, 0, 0))
+                .foregroundBaseColor(Color.BLACK)
+                .animated(true)
+                .shadowsEnabled(true)
+                .valueVisible(false)
+                //.title("FUEL")
+                .needleColor(Color.rgb(255, 10, 1))
+                .needleShape(NeedleShape.ROUND)
+                .needleSize(NeedleSize.THICK)
+                .minorTickMarksVisible(false)
+                .mediumTickMarksVisible(false)
+                //.majorTickMarkType(TickMarkType.TRIANGLE)
+                .sectionsVisible(true)
+                .sections(new Section(0, 0.2, Color.rgb(255, 10, 1)))
+                .minValue(0)
+                .maxValue(1)
+                .angleRange(90)
+                .customTickLabelsEnabled(true)
+                .customTickLabels("Empty", "", "", "", "", "1/2", "", "", "", "", "Full")
+                .build();
+
+         tempGuage = GaugeBuilder.create()
+                 .skinType(SkinType.LCD)
+                 .animated(true)
+                 .title("Temperature")
+                 .subTitle("Engine")
+                 .unit("\u00B0C")
+                 .lcdDesign(LcdDesign.BLUE_LIGHTBLUE2)
+                 .thresholdVisible(true)
+                 .threshold(50)
+                 .build();
     }
 
-    private void generateRandom() {
-        long start_time = System.currentTimeMillis();
-        long wait_time = 2000;
-        long end_time = start_time + wait_time;
+//    private void generateRandom() {
+//        long start_time = System.currentTimeMillis();
+//        long wait_time = 2000;
+//        long end_time = start_time + wait_time;
+//
+//        while (System.currentTimeMillis() < end_time) {
+//            IntStream rand = new Random().ints(1, 0, 101);
+//            System.out.println(rand);
+//        }
+//    }
 
-        while (System.currentTimeMillis() < end_time) {
-            IntStream rand = new Random().ints(1, 0, 101);
-            System.out.println(rand);
-        }
-    }
-
-    @Override public void start(Stage stage) {
-
-        generateRandom();
-
+    @Override
+    public void start(Stage stage) {
         HBox hbox = new HBox();
 
         Button testButton = new Button("Testing");
-        testButton.setOnMousePressed(event -> gauge.setValue(RND.nextDouble() * gauge.getRange() + gauge.getMinValue()));
+        testButton.addEventHandler(ActionEvent.ACTION,
+                (event) -> RPMGauge.setValue(
+                        RND.nextDouble() * RPMGauge.getRange() + RPMGauge.getMinValue()));
+        testButton.addEventHandler(ActionEvent.ACTION,
+                (event) -> fuelGauge.setValue(
+                        RND.nextDouble() * fuelGauge.getRange() + fuelGauge.getMinValue()));
+        testButton.addEventHandler(ActionEvent.ACTION,
+                (event) -> tempGuage.setValue(
+                        RND.nextDouble() * tempGuage.getRange() + tempGuage.getMinValue()));
 
         Button cancelButton = new Button("Cancel");
-        cancelButton.setOnMousePressed(event -> gauge.setValue(0));
+        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> RPMGauge.setValue(0));
 
-        hbox.getChildren().addAll(fGauge, testButton, cancelButton);
+        hbox.getChildren().addAll(fuelGauge, fRPMGauge, tempGuage, testButton, cancelButton);
+
         hbox.setSpacing(10);
-        HBox.setHgrow(fGauge, Priority.ALWAYS);
+
+        HBox.setHgrow(fRPMGauge, Priority.ALWAYS);
         HBox.setHgrow(testButton, Priority.ALWAYS);
         HBox.setHgrow(cancelButton, Priority.ALWAYS);
 
         hbox.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(hbox);
-
-        stage.setTitle("Speedometer");
+        stage.setTitle("Telemetry System");
         stage.setScene(scene);
         stage.show();
     }
