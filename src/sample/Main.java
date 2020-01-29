@@ -6,9 +6,11 @@ import eu.hansolo.medusa.GaugeDesign.GaugeBackground;
 import eu.hansolo.medusa.Marker.MarkerType;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.paint.Color;
@@ -19,8 +21,8 @@ import java.util.Random;
 
 public class Main extends Application {
     private static final Random RND = new Random();
-    private Gauge fuelGauge, RPMGauge, tempGuage;
-    private FGauge fRPMGauge;
+    private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge;
+    private FGauge fSpeedGauge;
 
     @Override
     public void init() {
@@ -60,8 +62,8 @@ public class Main extends Application {
                 .build();
 
         // RPM Gauge parameters
-        RPMGauge = GaugeBuilder.create()
-                .prefSize(500, 500)                                                                  // Set the preferred size of the control
+        speedGauge = GaugeBuilder.create()
+                .prefSize(400, 400)                                                                  // Set the preferred size of the control
                 // Related to Foreground Elements
                 .foregroundBaseColor(Color.WHITE)                                                   // Defines a color for title, subtitle, unit, value, tick label, tick mark, major tick mark, medium tick mark and minor tick mark
                 // Related to Title Text
@@ -140,13 +142,34 @@ public class Main extends Application {
                 .animationDuration(500)                                                             // Defines the speed of the needle in milliseconds (10 - 10000 ms)
                 .build();
 
-        fRPMGauge = FGaugeBuilder
+        fSpeedGauge = FGaugeBuilder
                 .create()
-                .prefSize(500, 500)
-                .gauge(RPMGauge)
+                .prefSize(400, 400)
+                .gauge(speedGauge)
                 .gaugeDesign(GaugeDesign.METAL)
                 .gaugeBackground(GaugeBackground.CARBON)
                 .foregroundVisible(true)
+                .build();
+
+        RPMGauge = GaugeBuilder.create()
+                .skinType(SkinType.SIMPLE_DIGITAL)
+                .prefSize(350, 350)
+                .title("RPM")
+                .unit("x1000 rev/min")
+                .animated(true)
+                .minValue(0)
+                .maxValue(8)
+                .thresholdVisible(true)
+                .threshold(5.50)
+                .sections(new Section(4.5, 6))
+                .gradientBarEnabled(true)
+                .gradientBarStops(new Stop(0.0, Color.BLUE),
+                        new Stop(0.25, Color.CYAN),
+                        new Stop(0.5, Color.LIME),
+                        new Stop(0.75, Color.YELLOW),
+                        new Stop(1.0, Color.RED))
+                .animated(true)
+                .animationDuration(500)
                 .build();
 
         fuelGauge = GaugeBuilder.create()
@@ -157,13 +180,11 @@ public class Main extends Application {
                 .animated(true)
                 .shadowsEnabled(true)
                 .valueVisible(false)
-                //.title("FUEL")
                 .needleColor(Color.rgb(255, 10, 1))
                 .needleShape(NeedleShape.ROUND)
                 .needleSize(NeedleSize.THICK)
                 .minorTickMarksVisible(false)
                 .mediumTickMarksVisible(false)
-                //.majorTickMarkType(TickMarkType.TRIANGLE)
                 .sectionsVisible(true)
                 .sections(new Section(0, 0.2, Color.rgb(255, 10, 1)))
                 .minValue(0)
@@ -173,13 +194,13 @@ public class Main extends Application {
                 .customTickLabels("Empty", "", "", "", "", "1/2", "", "", "", "", "Full")
                 .build();
 
-         tempGuage = GaugeBuilder.create()
+         tempGauge = GaugeBuilder.create()
                  .skinType(SkinType.LCD)
                  .animated(true)
                  .title("Temperature")
                  .subTitle("Engine")
                  .unit("\u00B0C")
-                 .lcdDesign(LcdDesign.BLUE_LIGHTBLUE2)
+                 .lcdDesign(LcdDesign.BLACK_RED)
                  .thresholdVisible(true)
                  .threshold(50)
                  .build();
@@ -198,33 +219,47 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
+
+        BorderPane borderPane = new BorderPane();
         HBox hbox = new HBox();
 
         Button testButton = new Button("Testing");
         testButton.addEventHandler(ActionEvent.ACTION,
-                (event) -> RPMGauge.setValue(
-                        RND.nextDouble() * RPMGauge.getRange() + RPMGauge.getMinValue()));
+                (event) -> speedGauge.setValue(
+                        RND.nextDouble() * speedGauge.getRange() + speedGauge.getMinValue()));
         testButton.addEventHandler(ActionEvent.ACTION,
                 (event) -> fuelGauge.setValue(
                         RND.nextDouble() * fuelGauge.getRange() + fuelGauge.getMinValue()));
         testButton.addEventHandler(ActionEvent.ACTION,
-                (event) -> tempGuage.setValue(
-                        RND.nextDouble() * tempGuage.getRange() + tempGuage.getMinValue()));
+                (event) -> tempGauge.setValue(
+                        RND.nextDouble() * tempGauge.getRange() + tempGauge.getMinValue()));
+        testButton.addEventHandler(ActionEvent.ACTION,
+                (event) -> RPMGauge.setValue(
+                        RND.nextDouble() * RPMGauge.getRange() + RPMGauge.getMinValue()));
 
         Button cancelButton = new Button("Cancel");
+        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> speedGauge.setValue(0));
+        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> fuelGauge.setValue(0));
+        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> tempGauge.setValue(0));
         cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> RPMGauge.setValue(0));
 
-        hbox.getChildren().addAll(fuelGauge, fRPMGauge, tempGuage, testButton, cancelButton);
-
+        hbox.getChildren().addAll(fuelGauge, fSpeedGauge, RPMGauge, tempGauge, testButton, cancelButton);
+        hbox.setPadding(new Insets(15, 12, 15, 0));
         hbox.setSpacing(10);
+        hbox.setStyle("-fx-background-color: indianred");
 
-        HBox.setHgrow(fRPMGauge, Priority.ALWAYS);
+        HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
+        HBox.setHgrow(fuelGauge, Priority.ALWAYS);
+        HBox.setHgrow(tempGauge, Priority.ALWAYS);
+        HBox.setHgrow(RPMGauge, Priority.ALWAYS);
         HBox.setHgrow(testButton, Priority.ALWAYS);
         HBox.setHgrow(cancelButton, Priority.ALWAYS);
 
         hbox.setAlignment(Pos.CENTER);
 
-        Scene scene = new Scene(hbox);
+        borderPane.setTop(hbox);
+
+        Scene scene = new Scene(borderPane);
         stage.setTitle("Telemetry System");
         stage.setScene(scene);
         stage.show();
