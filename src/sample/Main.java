@@ -1,9 +1,6 @@
 package sample;
 
 import eu.hansolo.medusa.*;
-import eu.hansolo.medusa.Gauge.*;
-import eu.hansolo.medusa.GaugeDesign.GaugeBackground;
-import eu.hansolo.medusa.Marker.MarkerType;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
@@ -15,11 +12,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 
-import java.util.Random;
-import java.util.stream.IntStream;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Main extends Application {
-    private static final Random RND = new Random();
     private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge;
     private FGauge fSpeedGauge;
 
@@ -47,7 +43,7 @@ public class Main extends Application {
                 .value(25)
                 .text("Marker 1")
                 .color(Color.HOTPINK)
-                .markerType(MarkerType.DOT)
+                .markerType(Marker.MarkerType.DOT)
                 .onMarkerPressed(markerEvent -> System.out.println("Marker 1 pressed"))
                 .onMarkerReleased(markerEvent -> System.out.println("Marker 1 released"))
                 .build();
@@ -56,7 +52,7 @@ public class Main extends Application {
                 .value(75)
                 .text("Marker 2")
                 .color(Color.CYAN)
-                .markerType(MarkerType.STANDARD)
+                .markerType(Marker.MarkerType.STANDARD)
                 .onMarkerPressed(markerEvent -> System.out.println("Marker 2 pressed"))
                 .onMarkerReleased(markerEvent -> System.out.println("Marker 2 released"))
                 .build();
@@ -71,7 +67,7 @@ public class Main extends Application {
                 .lcdVisible(true)
                 .lcdDesign(LcdDesign.STANDARD)
                 .lcdFont(LcdFont.DIGITAL_BOLD)
-                .scaleDirection(ScaleDirection.CLOCKWISE)
+                .scaleDirection(Gauge.ScaleDirection.CLOCKWISE)
                 .minValue(0)
                 .maxValue(100)
                 .startAngle(320)
@@ -92,15 +88,15 @@ public class Main extends Application {
                 .minorTickMarksVisible(true)
                 .minorTickMarkType(TickMarkType.LINE)
                 .ledVisible(false)
-                .ledType(LedType.STANDARD)
+                .ledType(Gauge.LedType.STANDARD)
                 .ledColor(Color.rgb(255, 200, 0))
                 .ledBlinking(false)
-                .needleShape(NeedleShape.ANGLED)
-                .needleSize(NeedleSize.STANDARD)
+                .needleShape(Gauge.NeedleShape.ANGLED)
+                .needleSize(Gauge.NeedleSize.STANDARD)
                 .needleColor(Color.CRIMSON)
                 .startFromZero(false)
                 .returnToZero(false)
-                .knobType(KnobType.METAL)
+                .knobType(Gauge.KnobType.METAL)
                 .knobColor(Color.LIGHTGRAY)
                 .interactive(true)
                 .onButtonPressed(buttonEvent -> System.out.println("Knob pressed"))
@@ -129,13 +125,13 @@ public class Main extends Application {
                 .prefSize(400, 400)
                 .gauge(speedGauge)
                 .gaugeDesign(GaugeDesign.METAL)
-                .gaugeBackground(GaugeBackground.CARBON)
+                .gaugeBackground(GaugeDesign.GaugeBackground.CARBON)
                 .foregroundVisible(true)
                 .build();
 
         /*<--------------------> RPM Gauge <--------------------> */
         RPMGauge = GaugeBuilder.create()
-                .skinType(SkinType.SIMPLE_DIGITAL)
+                .skinType(Gauge.SkinType.SIMPLE_DIGITAL)
                 .prefSize(350, 350)
                 .title("RPM")
                 .unit("x1000 rev/min")
@@ -157,7 +153,7 @@ public class Main extends Application {
 
         /*<--------------------> Fuel Gauge <--------------------> */
         fuelGauge = GaugeBuilder.create()
-                .skinType(SkinType.HORIZONTAL)
+                .skinType(Gauge.SkinType.HORIZONTAL)
                 .prefSize(300, 250)
                 .knobColor(Color.rgb(0, 0, 0))
                 .foregroundBaseColor(Color.BLACK)
@@ -165,14 +161,14 @@ public class Main extends Application {
                 .shadowsEnabled(true)
                 .valueVisible(false)
                 .needleColor(Color.rgb(255, 10, 1))
-                .needleShape(NeedleShape.ROUND)
-                .needleSize(NeedleSize.THICK)
+                .needleShape(Gauge.NeedleShape.ROUND)
+                .needleSize(Gauge.NeedleSize.THICK)
                 .minorTickMarksVisible(false)
                 .mediumTickMarksVisible(false)
                 .sectionsVisible(true)
                 .sections(new Section(0, 0.2, Color.rgb(255, 10, 1)))
                 .minValue(0)
-                .maxValue(1)
+                .maxValue(10)
                 .angleRange(90)
                 .customTickLabelsEnabled(true)
                 .customTickLabels("Empty", "", "", "", "", "1/2", "", "", "", "", "Full")
@@ -180,7 +176,7 @@ public class Main extends Application {
 
         /*<--------------------> Temperature Gauge <--------------------> */
          tempGauge = GaugeBuilder.create()
-                 .skinType(SkinType.LCD)
+                 .skinType(Gauge.SkinType.LCD)
                  .animated(true)
                  .title("Temperature")
                  .subTitle("Engine")
@@ -189,18 +185,6 @@ public class Main extends Application {
                  .thresholdVisible(true)
                  .threshold(50)
                  .build();
-    }
-
-    /*<--------------------> Generate random number from 0 to a 100 - for unit testing - *PROBLEM* <--------------------> */
-    private void generateRandom() {
-        long start_time = System.currentTimeMillis();
-        long wait_time = 2000;
-        long end_time = start_time + wait_time;
-
-        while (System.currentTimeMillis() < end_time) {
-            IntStream rand = new Random().ints(1, 0, 101);
-            System.out.println(rand);
-        }
     }
 
     @Override
@@ -219,13 +203,12 @@ public class Main extends Application {
         hBoxGauges.setAlignment(Pos.CENTER);
 
         /*<--------------------> Test Button - HBox <--------------------> */
-        // clean up repeated code
-        // use generateRandom function to randomly keep generating 0 to a 100
-        /*<------------------------------------------------------------> */
+        // TODO: clean up repeated code
+        // TODO: use generateRandom function to randomly keep generating 0 to a 100
         HBox hBoxTestButtons = new HBox();
 
         Button testButton = new Button("Testing");
-        testButton.addEventHandler(ActionEvent.ACTION,
+        /*testButton.addEventHandler(ActionEvent.ACTION,
                 (event) -> speedGauge.setValue(
                         RND.nextDouble() * speedGauge.getRange() + speedGauge.getMinValue()));
         testButton.addEventHandler(ActionEvent.ACTION,
@@ -236,13 +219,40 @@ public class Main extends Application {
                         RND.nextDouble() * tempGauge.getRange() + tempGauge.getMinValue()));
         testButton.addEventHandler(ActionEvent.ACTION,
                 (event) -> RPMGauge.setValue(
-                        RND.nextDouble() * RPMGauge.getRange() + RPMGauge.getMinValue()));
+                        RND.nextDouble() * RPMGauge.getRange() + RPMGauge.getMinValue()));*/
+
+        // Code smell removed
+        /*testButton.addEventHandler(ActionEvent.ACTION, (event) -> {
+            *//*speedGauge.setValue(RND.nextDouble() * speedGauge.getRange() + speedGauge.getMinValue());
+            fuelGauge.setValue(RND.nextDouble() * fuelGauge.getRange() + fuelGauge.getMinValue());
+            tempGauge.setValue(RND.nextDouble() * tempGauge.getRange() + tempGauge.getMinValue());
+            RPMGauge.setValue(RND.nextDouble() * RPMGauge.getRange() + RPMGauge.getMinValue());*//*
+        });*/
+
+        //
+        testButton.addEventHandler(ActionEvent.ACTION, (event) -> {
+            InfiniteGaugeData randomData = new InfiniteGaugeData(fuelGauge, speedGauge, RPMGauge, tempGauge);
+            randomData.start();
+
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    randomData.run();
+                }
+            }, 0, 2000);
+        });
 
         Button cancelButton = new Button("Cancel");
-        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> speedGauge.setValue(0));
+        /*cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> speedGauge.setValue(0));
         cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> fuelGauge.setValue(0));
         cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> tempGauge.setValue(0));
-        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> RPMGauge.setValue(0));
+        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> RPMGauge.setValue(0));*/
+        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> {
+            speedGauge.setValue(0);
+            fuelGauge.setValue(0);
+            tempGauge.setValue(0);
+            RPMGauge.setValue(0);
+        });
 
         hBoxTestButtons.setPadding(new Insets(10, 10, 10, 10));
         hBoxTestButtons.setSpacing(10);
