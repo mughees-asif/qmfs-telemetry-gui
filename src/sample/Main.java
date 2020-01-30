@@ -55,7 +55,7 @@ public class Main extends Application {
 
         /*<--------------------> SpeedGauge <--------------------> */
         speedGauge = GaugeBuilder.create()
-                .prefSize(400, 400)
+                .prefSize(350, 350)
                 .foregroundBaseColor(Color.WHITE)
                 .title("Speedometer")
                 .unit("Km/h")
@@ -145,19 +145,18 @@ public class Main extends Application {
         fuelGauge = GaugeBuilder.create()
                 .title("Fuel")
                 .skinType(Gauge.SkinType.HORIZONTAL)
-                .prefSize(300, 250)
-                .knobColor(Color.rgb(0, 0, 0))
+                .prefSize(250, 250)
                 .foregroundBaseColor(Color.BLACK)
                 .animated(true)
                 .shadowsEnabled(true)
                 .valueVisible(false)
                 .needleColor(Color.rgb(255, 10, 1))
-                .needleShape(Gauge.NeedleShape.ROUND)
+                .needleShape(Gauge.NeedleShape.ANGLED)
                 .needleSize(Gauge.NeedleSize.THICK)
                 .minorTickMarksVisible(false)
                 .mediumTickMarksVisible(false)
                 .sectionsVisible(true)
-                .sections(new Section(0, 0.2, Color.rgb(255, 10, 1)))
+                .sections(new Section(0, 2, Color.rgb(255, 10, 1)))
                 .minValue(0)
                 .maxValue(10)
                 .angleRange(90)
@@ -237,11 +236,11 @@ public class Main extends Application {
 
         HBox switchGraphButton = new HBox(10);
 
-        CheckBox switchCheckBox = new CheckBox("Graphs On/Off");
+        CheckBox switchCheckBox = new CheckBox("Toggle Graphs On/Off");
         switchGraphButton.getChildren().addAll(switchCheckBox);
         switchGraphButton.setAlignment(Pos.CENTER);
         HBox.setHgrow(switchCheckBox, Priority.ALWAYS);
-        switchGraphButton.setPadding(new Insets(10,10,10,10));
+        switchCheckBox.setPadding(new Insets(10,10,10,10));
 
         /*<--------------------> Main layout - BorderPane <--------------------> */
         BorderPane borderPane = new BorderPane();
@@ -252,7 +251,7 @@ public class Main extends Application {
 
         /*<--------------------> Main Scene <--------------------> */
         Scene scene = new Scene(borderPane, 1500, 500);
-        scene.getStylesheets().add("path/styles.css");
+        scene.getStylesheets().add("sample/styles.css");
         stage.setTitle("Telemetry System - QMFS");
         stage.setScene(scene);
         stage.show();
@@ -264,7 +263,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        setUserAgentStylesheet(STYLESHEET_MODENA);
+        setUserAgentStylesheet(STYLESHEET_CASPIAN);
         launch(args);
     }
 }
