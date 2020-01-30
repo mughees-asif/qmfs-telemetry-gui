@@ -2,9 +2,7 @@ package sample;
 
 import eu.hansolo.medusa.Gauge;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -54,34 +52,20 @@ class InfiniteGaugeData implements Runnable {
                 RPMGauge.setValue(rpm);
                 RPMGraph.setValue(rpm);
 
-                Date date = new Date();
-                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
+                SimpleDateFormat liveDate = new SimpleDateFormat(" h:mm:s a, EEEE dd MMMM YYYY");
+                String date = liveDate.format(new Date());
                 try {
                     Logger.log("*************" + date + "*************\n");
                     Logger.log("Speed: " + speed + "\n");
                     Logger.log("Fuel: " + fuel + "\n");
                     Logger.log("Temp: " + temp + "\n");
                     Logger.log("RPM: " + rpm + "\n");
+                    Logger.log("\n");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }, 0);
-
-
-    }
-
-    public static class Logger {
-        public static void log(String message) throws IOException {
-            PrintWriter out = new PrintWriter(new FileWriter("output.txt", true), true);
-            out.write(message);
-            out.close();
-        }
-    }
-
-    public void stop() {
-        System.exit(0);
     }
 
     void start() {

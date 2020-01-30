@@ -2,8 +2,10 @@
     -fx-background-color: black;
 }
 
-.toggleLabel {
-    -fx-text-fill: white;
+.buttons {
+    -fx-font: 16 arial;
+    -fx-base: red;
+    -fx-text-fill: black;
     -fx-text-weight: bold;
-    -fx-font: normal bold 14px 'serif';
+    -fx-focus-color: red;
 }

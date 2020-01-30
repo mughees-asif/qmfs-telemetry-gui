@@ -7,7 +7,8 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -16,6 +17,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -238,7 +241,7 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws FileNotFoundException {
         /*<--------------------> Gauges - HBox <--------------------> */
         HBox hBoxGauges = new HBox(15);
 
@@ -254,8 +257,8 @@ public class Main extends Application {
         /*<--------------------> Test Button - HBox <--------------------> */
         HBox hBoxTestButtons = new HBox(10);
 
-        Button testButton = new Button("Test");
-        testButton.addEventHandler(ActionEvent.ACTION, (event) -> {
+        Button readButton = new Button("Read");
+        readButton.addEventHandler(ActionEvent.ACTION, (event) -> {
             InfiniteGaugeData randomData = new InfiniteGaugeData(
                     fuelGauge, speedGauge, RPMGauge, tempGauge,
                     fuelGraph, speedGraph, RPMGraph, tempGraph);
@@ -274,34 +277,38 @@ public class Main extends Application {
             stop();
         });
 
-        exitButton.setStyle("-fx-background-color: slateblue; -fx-text-fill: white;");
-        testButton.setStyle("-fx-background-color: slateblue; -fx-text-fill: white;");
+        readButton.getStyleClass().add("buttons");
+        exitButton.getStyleClass().add("buttons");
 
         hBoxTestButtons.setPadding(new Insets(10, 10, 10, 10));
 
-        hBoxTestButtons.getChildren().addAll(testButton, exitButton);
+        hBoxTestButtons.getChildren().addAll(readButton, exitButton);
+        hBoxTestButtons.setAlignment(Pos.CENTER);
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
         // TODO: will be bottom of the BorderPane
-        // TODO: Constantly updating graphs to allow analysing of the data at the bottom of the toggle button
-        /*<------------------------------------------------------------> */
+        // TODO: graphs at the bottom of the toggle button
+        /*<------------------------------------------------------------------------> */
         VBox bottomVBox = new VBox(10);
 
-        Label toggleLabel = new Label("Toggle below to change from Gauge mode to Graph mode");
-        toggleLabel.getStyleClass().add("toggleLabel");
-        ToggleButton toggleButton = new ToggleButton();
-        toggleButton.setMaxSize(200,50);
-        bottomVBox.setAlignment(Pos.CENTER);
+
+        Image image = new Image(new FileInputStream("C:/Users/fluxw/OneDrive/Pictures/graphsLabel.jpg"));
+
+        ImageView imageView = new ImageView(image);
+        imageView.setX(50);
+        imageView.setY(50);
+        imageView.setFitHeight(100);
+        imageView.setFitWidth(100);
+        imageView.setPreserveRatio(true);
+        imageView.getStyleClass();
 
         HBox analysingGraphsHBox = new HBox(125);
         analysingGraphsHBox.getChildren().addAll(fuelGraph, speedGraph, RPMGraph, tempGraph);
         analysingGraphsHBox.setAlignment(Pos.CENTER);
 
-        bottomVBox.getChildren().addAll(toggleLabel, toggleButton, analysingGraphsHBox);
+        bottomVBox.getChildren().addAll(imageView, analysingGraphsHBox);
         bottomVBox.setPadding(new Insets(10,10,10,10));
-
-
-
+        bottomVBox.setAlignment(Pos.CENTER);
 
         /*<--------------------> Main layout - BorderPane <--------------------> */
         BorderPane borderPane = new BorderPane();
