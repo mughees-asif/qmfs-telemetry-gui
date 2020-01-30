@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Stop;
@@ -138,12 +139,11 @@ public class Main extends Application {
                         new Stop(1.0, Color.RED))
                 .animated(true)
                 .animationDuration(500)
-                .customTickLabelsEnabled(true)
-                .customTickLabels("Empty", "", "", "", "", "1/2", "", "", "", "", "Full")
                 .build();
 
         /*<--------------------> Fuel Gauge <--------------------> */
         fuelGauge = GaugeBuilder.create()
+                .title("Fuel")
                 .skinType(Gauge.SkinType.HORIZONTAL)
                 .prefSize(300, 250)
                 .knobColor(Color.rgb(0, 0, 0))
@@ -161,6 +161,8 @@ public class Main extends Application {
                 .minValue(0)
                 .maxValue(10)
                 .angleRange(90)
+                .customTickLabelsEnabled(true)
+                .customTickLabels("Empty", "", "", "", "", "1/2", "", "", "", "", "Full")
                 .build();
 
         /*<--------------------> Temperature Gauge <--------------------> */
@@ -179,11 +181,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         /*<--------------------> Gauges - HBox <--------------------> */
-        HBox hBoxGauges = new HBox();
+        HBox hBoxGauges = new HBox(15);
 
         hBoxGauges.getChildren().addAll(fuelGauge, fSpeedGauge, RPMGauge, tempGauge);
-        hBoxGauges.setPadding(new Insets(15, 12, 15, 0));
-        hBoxGauges.setSpacing(10);
+        hBoxGauges.setPadding(new Insets(5, 5, 5, 0));
 
         HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
         HBox.setHgrow(fuelGauge, Priority.ALWAYS);
@@ -192,10 +193,9 @@ public class Main extends Application {
         hBoxGauges.setAlignment(Pos.CENTER);
 
         /*<--------------------> Test Button - HBox <--------------------> */
-        // TODO: clean up repeated code
         // TODO: use generateRandom function to randomly keep generating 0 to a 100
         /*<------------------------------------------------------------> */
-        HBox hBoxTestButtons = new HBox();
+        HBox hBoxTestButtons = new HBox(10);
 
         Button testButton = new Button("Test");
         testButton.addEventHandler(ActionEvent.ACTION, (event) -> {
@@ -216,7 +216,6 @@ public class Main extends Application {
         });
 
         hBoxTestButtons.setPadding(new Insets(10, 10, 10, 10));
-        hBoxTestButtons.setSpacing(10);
         hBoxTestButtons.getChildren().addAll(testButton, exitButton);
 
         /*<--------------------> Parameters displayed in text format - VBox <--------------------> */
@@ -226,17 +225,26 @@ public class Main extends Application {
         VBox vBoxParameterTextDisplay = new VBox();
 
 
-        /*<--------------------> Analysing graph - StackPane <--------------------> */
+        /*<--------------------> Analysing graphs + Switch button - StackPane <--------------------> */
         // TODO: will be right of the BorderPane
-        // TODO: Constantly updating graph to allow analysing of the data
+        // TODO: Constantly updating graphs to allow analysing of the data
+        // TODO: Implement a checkbox to change between gauges and graphs
         /*<------------------------------------------------------------> */
-        StackPane paneAnalysingGraph = new StackPane();
+        StackPane paneAnalysingGraphs = new StackPane();
+
+        HBox switchGraphButton = new HBox(10);
+
+        CheckBox switchCheckBox = new CheckBox("Graphs On/Off");
+        switchGraphButton.getChildren().addAll(switchCheckBox);
+        switchGraphButton.setAlignment(Pos.CENTER);
+        HBox.setHgrow(switchCheckBox, Priority.ALWAYS);
+        switchGraphButton.setPadding(new Insets(10,10,10,10));
 
         /*<--------------------> Main layout - BorderPane <--------------------> */
         BorderPane borderPane = new BorderPane();
         borderPane.setTop(hBoxTestButtons);
         borderPane.setCenter(hBoxGauges);
-        borderPane.setRight(paneAnalysingGraph);
+        borderPane.setRight(switchCheckBox);
         borderPane.setBottom(vBoxParameterTextDisplay);
 
         /*<--------------------> Main Scene <--------------------> */
