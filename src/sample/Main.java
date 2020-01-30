@@ -215,6 +215,9 @@ public class Main extends Application {
             stop();
         });
 
+        exitButton.setStyle("-fx-background-color: slateblue; -fx-text-fill: white;");
+        testButton.setStyle("-fx-background-color: slateblue; -fx-text-fill: white;");
+
         hBoxTestButtons.setPadding(new Insets(10, 10, 10, 10));
         hBoxTestButtons.getChildren().addAll(testButton, exitButton);
 
@@ -248,7 +251,8 @@ public class Main extends Application {
         borderPane.setBottom(vBoxParameterTextDisplay);
 
         /*<--------------------> Main Scene <--------------------> */
-        Scene scene = new Scene(borderPane);
+        Scene scene = new Scene(borderPane, 1500, 500);
+        scene.getStylesheets().add("path/styles.css");
         stage.setTitle("Telemetry System - QMFS");
         stage.setScene(scene);
         stage.show();
