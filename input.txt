@@ -1,0 +1,240 @@
+Speed: 37Fuel: 0Temp: 10RPM: 8Speed: 47Fuel: 6Temp: 31RPM: 5Speed: 74Fuel: 9Temp: 29RPM: 7Speed: 89Fuel: 5Temp: 22RPM: 6Speed: 63Fuel: 5Temp: 43RPM: 11Speed: 84Fuel: 4Temp: 75RPM: 15Speed: 33Fuel: 6Temp: 2RPM: 9Speed: 2Fuel: 4Temp: 31RPM: 4Speed: 53Fuel: 4Temp: 90RPM: 8Speed: 16Fuel: 1Temp: 57RPM: 11Speed: 5Fuel: 9Temp: 68RPM: 3Speed: 17Fuel: 2Temp: 15RPM: 15Speed: 59Fuel: 4Temp: 26RPM: 3Speed: 92
+Fuel: 8
+Temp: 93
+RPM: 7
+Speed: 57
+Fuel: 2
+Temp: 79
+RPM: 4
+Speed: 21
+Fuel: 9
+Temp: 13
+RPM: 12
+Speed: 17
+Fuel: 0
+Temp: 84
+RPM: 10
+Speed: 16
+Fuel: 1
+Temp: 36
+RPM: 3
+Speed: 40
+Fuel: 6
+Temp: 97
+RPM: 1
+Speed: 26
+Fuel: 7
+Temp: 12
+RPM: 6
+Speed: 50
+Fuel: 5
+Temp: 37
+RPM: 4
+Speed: 11
+Fuel: 4
+Temp: 47
+RPM: 12
+Speed: 56
+Fuel: 0
+Temp: 17
+RPM: 10
+Speed: 26
+Fuel: 7
+Temp: 68
+RPM: 0
+Speed: 84
+Fuel: 9
+Temp: 89
+RPM: 9
+Speed: 13
+Fuel: 1
+Temp: 57
+RPM: 1
+Speed: 30
+Fuel: 1
+Temp: 89
+RPM: 12
+Speed: 71
+Fuel: 1
+Temp: 28
+RPM: 6
+Speed: 45
+Fuel: 4
+Temp: 84
+RPM: 10
+Speed: 67
+Fuel: 7
+Temp: 42
+RPM: 13
+Speed: 5
+Fuel: 3
+Temp: 64
+RPM: 1
+Speed: 30
+Fuel: 7
+Temp: 20
+RPM: 6
+Speed: 11
+Fuel: 5
+Temp: 41
+RPM: 14
+Speed: 62
+Fuel: 4
+Temp: 3
+RPM: 1
+Speed: 89
+Fuel: 1
+Temp: 35
+RPM: 3
+Speed: 91
+Fuel: 4
+Temp: 24
+RPM: 1
+Speed: 93
+Fuel: 1
+Temp: 8
+RPM: 0
+Speed: 27
+Fuel: 6
+Temp: 39
+RPM: 11
+***********************
+Speed: 59
+Fuel: 4
+Temp: 51
+RPM: 10
+***********************
+Speed: 2
+Fuel: 0
+Temp: 69
+RPM: 13
+***********************
+Speed: 10
+Fuel: 8
+Temp: 30
+RPM: 10
+***********************
+Speed: 20
+Fuel: 8
+Temp: 73
+RPM: 0
+***********************
+Speed: 14
+Fuel: 7
+Temp: 23
+RPM: 4
+*************Thu Jan 30 21:13:45 GMT 2020*************
+Speed: 57
+Fuel: 0
+Temp: 46
+RPM: 8
+*************Thu Jan 30 21:13:46 GMT 2020*************
+Speed: 73
+Fuel: 9
+Temp: 13
+RPM: 8
+*************Thu Jan 30 21:13:47 GMT 2020*************
+Speed: 85
+Fuel: 3
+Temp: 28
+RPM: 4
+*************Thu Jan 30 21:13:48 GMT 2020*************
+Speed: 55
+Fuel: 0
+Temp: 39
+RPM: 10
+*************Thu Jan 30 21:13:49 GMT 2020*************
+Speed: 62
+Fuel: 4
+Temp: 67
+RPM: 11
+*************Thu Jan 30 21:13:50 GMT 2020*************
+Speed: 95
+Fuel: 4
+Temp: 96
+RPM: 14
+*************Thu Jan 30 21:13:51 GMT 2020*************
+Speed: 83
+Fuel: 3
+Temp: 58
+RPM: 1
+*************Thu Jan 30 21:13:52 GMT 2020*************
+Speed: 69
+Fuel: 3
+Temp: 79
+RPM: 1
+*************Thu Jan 30 21:13:53 GMT 2020*************
+Speed: 74
+Fuel: 4
+Temp: 30
+RPM: 2
+*************Thu Jan 30 21:13:54 GMT 2020*************
+Speed: 46
+Fuel: 8
+Temp: 77
+RPM: 13
+*************Thu Jan 30 21:13:55 GMT 2020*************
+Speed: 31
+Fuel: 5
+Temp: 1
+RPM: 0
+*************Thu Jan 30 21:13:56 GMT 2020*************
+Speed: 62
+Fuel: 6
+Temp: 47
+RPM: 11
+*************Thu Jan 30 21:17:14 GMT 2020*************
+Speed: 81
+Fuel: 6
+Temp: 69
+RPM: 13
+*************Thu Jan 30 21:17:15 GMT 2020*************
+Speed: 70
+Fuel: 4
+Temp: 86
+RPM: 5
+*************Thu Jan 30 21:17:16 GMT 2020*************
+Speed: 95
+Fuel: 0
+Temp: 16
+RPM: 2
+*************Thu Jan 30 21:17:17 GMT 2020*************
+Speed: 77
+Fuel: 9
+Temp: 59
+RPM: 10
+*************Thu Jan 30 21:17:18 GMT 2020*************
+Speed: 48
+Fuel: 0
+Temp: 1
+RPM: 8
+*************Thu Jan 30 21:17:19 GMT 2020*************
+Speed: 70
+Fuel: 0
+Temp: 93
+RPM: 2
+*************Thu Jan 30 21:17:20 GMT 2020*************
+Speed: 9
+Fuel: 9
+Temp: 82
+RPM: 7
+*************Thu Jan 30 21:17:21 GMT 2020*************
+Speed: 82
+Fuel: 2
+Temp: 98
+RPM: 5
+*************Thu Jan 30 21:17:22 GMT 2020*************
+Speed: 16
+Fuel: 5
+Temp: 70
+RPM: 6
+*************Thu Jan 30 21:17:23 GMT 2020*************
+Speed: 8
+Fuel: 2
+Temp: 35
+RPM: 14
+*************Thu Jan 30 21:17:24 GMT 2020*************
+Speed: 38
+Fuel: 7
+Temp: 81
+RPM: 0

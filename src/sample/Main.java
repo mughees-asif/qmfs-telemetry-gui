@@ -316,6 +316,7 @@ public class Main extends Application {
         stage.setTitle("Telemetry System - QMFS");
         stage.setScene(scene);
         stage.show();
+
     }
 
     @Override
