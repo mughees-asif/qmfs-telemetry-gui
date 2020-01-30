@@ -8,7 +8,10 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.*;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
@@ -22,8 +25,16 @@ public class Main extends Application {
     private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge;
     private FGauge fSpeedGauge;
 
+    private Gauge speedGraph, fuelGraph, RPMGraph, tempGraph;
+
     @Override
     public void init() {
+
+        /*<--------------------------------------------------> */
+        /*<--------------------> Gauges <--------------------> */
+        // TODO: Separate into different classes
+        /*<--------------------------------------------------> */
+        /*<--------------------------------------------------> */
 
         /*<--------------------> Sections for SpeedGauge <--------------------> */
         Section section1 = SectionBuilder.create()
@@ -175,6 +186,55 @@ public class Main extends Application {
                  .thresholdVisible(true)
                  .threshold(50)
                  .build();
+
+        /*<------------------------------------------------------------> */
+        /*<--------------------> Analysing Graphs <--------------------> */
+        // TODO: Separate into different classes
+        /*<------------------------------------------------------------> */
+        /*<------------------------------------------------------------> */
+
+        /*<--------------------> Speed graph <--------------------> */
+        speedGraph = GaugeBuilder.create()
+                .skinType(Gauge.SkinType.TILE_SPARK_LINE)
+                .foregroundBaseColor(Color.WHITE)
+                .needleColor(Color.RED)
+                .animated(true)
+                .maxValue(100)
+                .minValue(0)
+                .threshold(50)
+                .title("Speed")
+                .build();
+
+        /*<--------------------> Fuel Graph <--------------------> */
+        fuelGraph = GaugeBuilder.create()
+                .skinType(Gauge.SkinType.TILE_SPARK_LINE)
+                .foregroundBaseColor(Color.WHITE)
+                .needleColor(Color.RED)
+                .animated(true)
+                .threshold(75)
+                .title("Fuel")
+                .build();
+
+        /*<--------------------> RPM Graph <--------------------> */
+        RPMGraph = GaugeBuilder.create()
+                .skinType(Gauge.SkinType.TILE_SPARK_LINE)
+                .foregroundBaseColor(Color.WHITE)
+                .needleColor(Color.RED)
+                .animated(true)
+                .threshold(75)
+                .title("RPM")
+                .build();
+
+        /*<--------------------> Temperature Graph <--------------------> */
+        tempGraph = GaugeBuilder.create()
+                .skinType(Gauge.SkinType.TILE_SPARK_LINE)
+                .foregroundBaseColor(Color.WHITE)
+                .needleColor(Color.RED)
+                .animated(true)
+                .threshold(75)
+                .title("Temperature")
+                .build();
+
     }
 
     @Override
@@ -192,13 +252,13 @@ public class Main extends Application {
         hBoxGauges.setAlignment(Pos.CENTER);
 
         /*<--------------------> Test Button - HBox <--------------------> */
-        // TODO: use generateRandom function to randomly keep generating 0 to a 100
-        /*<------------------------------------------------------------> */
         HBox hBoxTestButtons = new HBox(10);
 
         Button testButton = new Button("Test");
         testButton.addEventHandler(ActionEvent.ACTION, (event) -> {
-            InfiniteGaugeData randomData = new InfiniteGaugeData(fuelGauge, speedGauge, RPMGauge, tempGauge);
+            InfiniteGaugeData randomData = new InfiniteGaugeData(
+                    fuelGauge, speedGauge, RPMGauge, tempGauge,
+                    fuelGraph, speedGraph, RPMGraph, tempGraph);
             randomData.start();
 
             new Timer().schedule(new TimerTask() {
@@ -221,13 +281,6 @@ public class Main extends Application {
 
         hBoxTestButtons.getChildren().addAll(testButton, exitButton);
 
-        /*<--------------------> Parameters displayed in text format - VBox <--------------------> */
-        // TODO: will be bottom of the BorderPane
-        // TODO: Three or more fields showing the GUI parameters in text
-        /*<------------------------------------------------------------> */
-        VBox vBoxParameterTextDisplay = new VBox();
-
-
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
         // TODO: will be bottom of the BorderPane
         // TODO: Constantly updating graphs to allow analysing of the data at the bottom of the toggle button
@@ -240,8 +293,14 @@ public class Main extends Application {
         toggleButton.setMaxSize(200,50);
         bottomVBox.setAlignment(Pos.CENTER);
 
-        bottomVBox.getChildren().addAll(toggleLabel, toggleButton);
+        HBox analysingGraphsHBox = new HBox(125);
+        analysingGraphsHBox.getChildren().addAll(fuelGraph, speedGraph, RPMGraph, tempGraph);
+        analysingGraphsHBox.setAlignment(Pos.CENTER);
+
+        bottomVBox.getChildren().addAll(toggleLabel, toggleButton, analysingGraphsHBox);
         bottomVBox.setPadding(new Insets(10,10,10,10));
+
+
 
 
         /*<--------------------> Main layout - BorderPane <--------------------> */
@@ -252,7 +311,7 @@ public class Main extends Application {
         borderPane.getStyleClass().add("borderpane");
 
         /*<--------------------> Main Scene <--------------------> */
-        Scene scene = new Scene(borderPane, 1500, 500);
+        Scene scene = new Scene(borderPane, 1500, 750);
         scene.getStylesheets().add("sample/styles.css");
         stage.setTitle("Telemetry System - QMFS");
         stage.setScene(scene);
