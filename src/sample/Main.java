@@ -238,6 +238,7 @@ public class Main extends Application {
 
         CheckBox switchCheckBox = new CheckBox("Toggle Graphs On/Off");
         switchGraphButton.getChildren().addAll(switchCheckBox);
+        switchCheckBox.getStyleClass().add("switchCheckBox");
         switchGraphButton.setAlignment(Pos.CENTER);
         HBox.setHgrow(switchCheckBox, Priority.ALWAYS);
         switchCheckBox.setPadding(new Insets(10,10,10,10));
@@ -248,6 +249,7 @@ public class Main extends Application {
         borderPane.setCenter(hBoxGauges);
         borderPane.setRight(switchCheckBox);
         borderPane.setBottom(vBoxParameterTextDisplay);
+        borderPane.getStyleClass().add("borderpane");
 
         /*<--------------------> Main Scene <--------------------> */
         Scene scene = new Scene(borderPane, 1500, 500);

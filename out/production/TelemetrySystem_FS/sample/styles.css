@@ -1,8 +1,9 @@
-.root {
-    -fx-font-size: 10pt;
-    -fx-font-family: "Verdana";
+.borderpane {
+    -fx-background-color: black;
 }
 
-.BorderPane {
-    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #dc143c, #32cd32);
+.switchCheckBox {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
 }
