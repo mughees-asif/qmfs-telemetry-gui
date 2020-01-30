@@ -1,6 +1,7 @@
 package sample;
 
 import eu.hansolo.medusa.Gauge;
+
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -8,14 +9,14 @@ import java.util.TimerTask;
 class InfiniteGaugeData implements Runnable {
     private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge;
 
-    public InfiniteGaugeData(Gauge fuelGauge, Gauge speedGauge, Gauge RPMGauge, Gauge tempGauge) {
+    InfiniteGaugeData(Gauge fuelGauge, Gauge speedGauge, Gauge RPMGauge, Gauge tempGauge) {
         this.fuelGauge = fuelGauge;
         this.speedGauge = speedGauge;
         this.RPMGauge = RPMGauge;
         this.tempGauge = tempGauge;
     }
 
-    /*<--------------------> Generate random number from 0 to a 100 - for unit testing - *PROBLEM* <--------------------> */
+    /*<--------------------> Generate random number from 0 to a 100 - for unit testing <--------------------> */
     private int generateRandom(int limit) {
         return new Random().nextInt(limit);
     }
@@ -27,7 +28,7 @@ class InfiniteGaugeData implements Runnable {
                 int speed = generateRandom(100);
                 int fuel = generateRandom(10);
                 int temp = generateRandom(100);
-                int rpm = generateRandom(8);
+                int rpm = generateRandom(16);
 
                 speedGauge.setValue(speed);
                 fuelGauge.setValue(fuel);
@@ -39,10 +40,13 @@ class InfiniteGaugeData implements Runnable {
                 System.out.println("Temp: " + temp);
                 System.out.println("RPM: " + rpm);
             }
-        }, 2000);
+        }, 0);
     }
 
-    public void start () {
+    public void stop() {
+        System.exit(0);
+    }
 
+    void start() {
     }
 }
