@@ -3,7 +3,6 @@
 }
 
 .switchCheckBox {
-    -fx-font-size: 12;
-    -fx-font-weight: bold;
-    -fx-text-fill: #ffffff;
+     -jfx-checked-color: red;
+     -jfx-unchecked-color: black;
 }

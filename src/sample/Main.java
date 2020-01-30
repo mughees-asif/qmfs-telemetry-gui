@@ -7,7 +7,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Stop;
@@ -183,7 +182,7 @@ public class Main extends Application {
         HBox hBoxGauges = new HBox(15);
 
         hBoxGauges.getChildren().addAll(fuelGauge, fSpeedGauge, RPMGauge, tempGauge);
-        hBoxGauges.setPadding(new Insets(5, 5, 5, 0));
+        hBoxGauges.setPadding(new Insets(5, 20, 5, 0));
 
         HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
         HBox.setHgrow(fuelGauge, Priority.ALWAYS);
@@ -234,21 +233,29 @@ public class Main extends Application {
         /*<------------------------------------------------------------> */
         StackPane paneAnalysingGraphs = new StackPane();
 
-        HBox switchGraphButton = new HBox(10);
+//        CheckBox toggleButton = new CheckBox("Toggle Graphs On/Off");
+//        switchGraphButton.getChildren().addAll(toggleButton);
+//        toggleButton.getStyleClass().add("toggleButton");
+//        switchGraphButton.setAlignment(Pos.CENTER);
+//        HBox.setHgrow(toggleButton, Priority.ALWAYS);
+//        toggleButton.setPadding(new Insets(10,10,10,10));
 
-        CheckBox switchCheckBox = new CheckBox("Toggle Graphs On/Off");
-        switchGraphButton.getChildren().addAll(switchCheckBox);
-        switchCheckBox.getStyleClass().add("switchCheckBox");
-        switchGraphButton.setAlignment(Pos.CENTER);
-        HBox.setHgrow(switchCheckBox, Priority.ALWAYS);
-        switchCheckBox.setPadding(new Insets(10,10,10,10));
+        VBox bottomVBox = new VBox(10);
+
+        ToggleButton toggleButton = new ToggleButton();
+        toggleButton.setMaxSize(200,50);
+        bottomVBox.setAlignment(Pos.CENTER);
+
+        bottomVBox.getChildren().addAll(toggleButton);
+        bottomVBox.setPadding(new Insets(10,10,10,10));
+
+
 
         /*<--------------------> Main layout - BorderPane <--------------------> */
         BorderPane borderPane = new BorderPane();
         borderPane.setTop(hBoxTestButtons);
         borderPane.setCenter(hBoxGauges);
-        borderPane.setRight(switchCheckBox);
-        borderPane.setBottom(vBoxParameterTextDisplay);
+        borderPane.setBottom(bottomVBox);
         borderPane.getStyleClass().add("borderpane");
 
         /*<--------------------> Main Scene <--------------------> */
