@@ -7,6 +7,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Stop;
@@ -54,7 +55,7 @@ public class Main extends Application {
 
         /*<--------------------> SpeedGauge <--------------------> */
         speedGauge = GaugeBuilder.create()
-                .prefSize(350, 350)
+                .prefSize(150, 350)
                 .foregroundBaseColor(Color.WHITE)
                 .title("Speedometer")
                 .unit("Km/h")
@@ -111,7 +112,7 @@ public class Main extends Application {
         /*<--------------------> FGauge Skin for SpeedGauge <--------------------> */
         fSpeedGauge = FGaugeBuilder
                 .create()
-                .prefSize(400, 400)
+                .prefSize(150, 350)
                 .gauge(speedGauge)
                 .gaugeDesign(GaugeDesign.METAL)
                 .gaugeBackground(GaugeDesign.GaugeBackground.CARBON)
@@ -120,32 +121,31 @@ public class Main extends Application {
 
         /*<--------------------> RPM Gauge <--------------------> */
         RPMGauge = GaugeBuilder.create()
-                .skinType(Gauge.SkinType.SIMPLE_DIGITAL)
-                .prefSize(350, 350)
-                .title("RPM")
-                .unit("x1000 rev/min")
-                .animated(true)
-                .minValue(0)
+                .skinType(Gauge.SkinType.SIMPLE)
+                .subTitle("\tx1000 rev/min")
+                .prefSize(150,200)
+                .sections(new Section(0, 8, "0", Color.web("#FFFFFF")),
+                        new Section(8, 10, "1", Color.web("#FFCCCC")),
+                        new Section(10, 12, "2", Color.web("#FF9999")),
+                        new Section(12, 13, "3", Color.web("#FF6666")),
+                        new Section(13, 14, "4", Color.web("#FF3333")),
+                        new Section(14, 16, "5", Color.web("#FF0000")))
+                .sectionsVisible(true)
+                .sectionIconsVisible(true)
                 .maxValue(16)
-                .thresholdVisible(true)
-                .threshold(11)
-                .sections(new Section(9, 12))
-                .gradientBarEnabled(true)
-                .gradientBarStops(new Stop(0.0, Color.BLUE),
-                        new Stop(0.25, Color.CYAN),
-                        new Stop(0.5, Color.LIME),
-                        new Stop(0.75, Color.YELLOW),
-                        new Stop(1.0, Color.RED))
+                .title("RPM")
+                .threshold(16)
                 .animated(true)
-                .animationDuration(500)
                 .build();
+
+
 
         /*<--------------------> Fuel Gauge <--------------------> */
         fuelGauge = GaugeBuilder.create()
                 .title("Fuel")
                 .skinType(Gauge.SkinType.HORIZONTAL)
-                .prefSize(250, 250)
-                .foregroundBaseColor(Color.BLACK)
+                .prefSize(80, 100)
+                .foregroundBaseColor(Color.WHITESMOKE)
                 .animated(true)
                 .shadowsEnabled(true)
                 .valueVisible(false)
@@ -166,11 +166,12 @@ public class Main extends Application {
         /*<--------------------> Temperature Gauge <--------------------> */
          tempGauge = GaugeBuilder.create()
                  .skinType(Gauge.SkinType.LCD)
+                 .prefSize(25,10)
                  .animated(true)
                  .title("Temperature")
                  .subTitle("Engine")
                  .unit("\u00B0C")
-                 .lcdDesign(LcdDesign.BLACK_RED)
+                 .lcdDesign(LcdDesign.GREEN_BLACK)
                  .thresholdVisible(true)
                  .threshold(50)
                  .build();
@@ -217,6 +218,7 @@ public class Main extends Application {
         testButton.setStyle("-fx-background-color: slateblue; -fx-text-fill: white;");
 
         hBoxTestButtons.setPadding(new Insets(10, 10, 10, 10));
+
         hBoxTestButtons.getChildren().addAll(testButton, exitButton);
 
         /*<--------------------> Parameters displayed in text format - VBox <--------------------> */
@@ -226,29 +228,20 @@ public class Main extends Application {
         VBox vBoxParameterTextDisplay = new VBox();
 
 
-        /*<--------------------> Analysing graphs + Switch button - StackPane <--------------------> */
-        // TODO: will be right of the BorderPane
-        // TODO: Constantly updating graphs to allow analysing of the data
-        // TODO: Implement a checkbox to change between gauges and graphs
+        /*<--------------------> Analysing graphs - StackPane <--------------------> */
+        // TODO: will be bottom of the BorderPane
+        // TODO: Constantly updating graphs to allow analysing of the data at the bottom of the toggle button
         /*<------------------------------------------------------------> */
-        StackPane paneAnalysingGraphs = new StackPane();
-
-//        CheckBox toggleButton = new CheckBox("Toggle Graphs On/Off");
-//        switchGraphButton.getChildren().addAll(toggleButton);
-//        toggleButton.getStyleClass().add("toggleButton");
-//        switchGraphButton.setAlignment(Pos.CENTER);
-//        HBox.setHgrow(toggleButton, Priority.ALWAYS);
-//        toggleButton.setPadding(new Insets(10,10,10,10));
-
         VBox bottomVBox = new VBox(10);
 
+        Label toggleLabel = new Label("Toggle below to change from Gauge mode to Graph mode");
+        toggleLabel.getStyleClass().add("toggleLabel");
         ToggleButton toggleButton = new ToggleButton();
         toggleButton.setMaxSize(200,50);
         bottomVBox.setAlignment(Pos.CENTER);
 
-        bottomVBox.getChildren().addAll(toggleButton);
+        bottomVBox.getChildren().addAll(toggleLabel, toggleButton);
         bottomVBox.setPadding(new Insets(10,10,10,10));
-
 
 
         /*<--------------------> Main layout - BorderPane <--------------------> */

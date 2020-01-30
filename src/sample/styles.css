@@ -2,7 +2,8 @@
     -fx-background-color: black;
 }
 
-.switchCheckBox {
-     -jfx-checked-color: red;
-     -jfx-unchecked-color: black;
+.toggleLabel {
+    -fx-text-fill: white;
+    -fx-text-weight: bold;
+    -fx-font: normal bold 14px 'serif';
 }

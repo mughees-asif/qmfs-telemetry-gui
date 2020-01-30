@@ -33,7 +33,7 @@ public class ToggleButton extends HBox {
     private void setStyle() {
         setWidth(10);
         label.setAlignment(Pos.CENTER);
-        setStyle("-fx-background-color: grey; -fx-text-fill:black; -fx-background-radius: 4;");
+        setStyle("-fx-background-color: white; -fx-text-fill: black; -fx-background-radius: 5;");
         setAlignment(Pos.CENTER_LEFT);
     }
 
@@ -49,7 +49,7 @@ public class ToggleButton extends HBox {
         switchedOn.addListener((a,b,c) -> {
             if (c) {
                 label.setText("Graph Mode");
-                setStyle("-fx-background-color: red;");
+                setStyle("-fx-background-color: lightgreen;");
                 label.toFront();
             }
             else {
