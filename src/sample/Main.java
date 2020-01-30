@@ -15,6 +15,8 @@ import javafx.stage.Stage;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static eu.hansolo.medusa.TickLabelLocation.INSIDE;
+
 public class Main extends Application {
     private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge;
     private FGauge fSpeedGauge;
@@ -24,38 +26,30 @@ public class Main extends Application {
 
         /*<--------------------> Sections for SpeedGauge <--------------------> */
         Section section1 = SectionBuilder.create()
-                .start(50)
-                .stop(75)
+                .start(30)
+                .stop(70)
                 .color(Color.rgb(255, 200, 0, 0.7))
-                .onSectionEntered(sectionEvent -> System.out.println("Entered Section 1"))
-                .onSectionLeft(sectionEvent -> System.out.println("Left Section 1"))
                 .build();
 
         Section section2 = SectionBuilder.create()
-                .start(75)
+                .start(70)
                 .stop(100)
                 .color(Color.rgb(255, 0, 0, 0.7))
-                .onSectionEntered(sectionEvent -> System.out.println("Entered Section 2"))
-                .onSectionLeft(sectionEvent -> System.out.println("Left Section 2"))
                 .build();
 
         /*<--------------------> Markers for SpeedGauge <--------------------> */
         Marker marker1 = MarkerBuilder.create()
-                .value(25)
+                .value(30)
                 .text("Marker 1")
                 .color(Color.HOTPINK)
                 .markerType(Marker.MarkerType.DOT)
-                .onMarkerPressed(markerEvent -> System.out.println("Marker 1 pressed"))
-                .onMarkerReleased(markerEvent -> System.out.println("Marker 1 released"))
                 .build();
 
         Marker marker2 = MarkerBuilder.create()
-                .value(75)
+                .value(70)
                 .text("Marker 2")
                 .color(Color.CYAN)
                 .markerType(Marker.MarkerType.STANDARD)
-                .onMarkerPressed(markerEvent -> System.out.println("Marker 2 pressed"))
-                .onMarkerReleased(markerEvent -> System.out.println("Marker 2 released"))
                 .build();
 
         /*<--------------------> SpeedGauge <--------------------> */
@@ -74,10 +68,8 @@ public class Main extends Application {
                 .startAngle(320)
                 .angleRange(280)
                 .tickLabelDecimals(0)
-                .tickLabelLocation(TickLabelLocation.INSIDE)
+                .tickLabelLocation(INSIDE)
                 .tickLabelOrientation(TickLabelOrientation.ORTHOGONAL)
-                .onlyFirstAndLastTickLabelVisible(false)
-                .tickLabelSectionsVisible(false)
                 .tickLabelSections(section1, section2)
                 .tickLabelColor(Color.WHITE)
                 .tickMarkSectionsVisible(false)
@@ -100,14 +92,10 @@ public class Main extends Application {
                 .knobType(Gauge.KnobType.METAL)
                 .knobColor(Color.LIGHTGRAY)
                 .interactive(true)
-                .onButtonPressed(buttonEvent -> System.out.println("Knob pressed"))
-                .onButtonReleased(buttonEvent -> System.out.println("Knob released"))
                 .thresholdVisible(true)
                 .threshold(50)
                 .thresholdColor(Color.RED)
                 .checkThreshold(true)
-                .onThresholdExceeded(thresholdEvent -> System.out.println("Threshold exceeded"))
-                .onThresholdUnderrun(thresholdEvent -> System.out.println("Threshold underrun"))
                 .gradientBarEnabled(true)
                 .gradientBarStops(new Stop(0.0, Color.BLUE),
                         new Stop(0.25, Color.CYAN),
@@ -150,6 +138,8 @@ public class Main extends Application {
                         new Stop(1.0, Color.RED))
                 .animated(true)
                 .animationDuration(500)
+                .customTickLabelsEnabled(true)
+                .customTickLabels("Empty", "", "", "", "", "1/2", "", "", "", "", "Full")
                 .build();
 
         /*<--------------------> Fuel Gauge <--------------------> */
@@ -171,8 +161,6 @@ public class Main extends Application {
                 .minValue(0)
                 .maxValue(10)
                 .angleRange(90)
-                .customTickLabelsEnabled(true)
-                .customTickLabels("Empty", "", "", "", "", "1/2", "", "", "", "", "Full")
                 .build();
 
         /*<--------------------> Temperature Gauge <--------------------> */
@@ -209,7 +197,7 @@ public class Main extends Application {
         /*<------------------------------------------------------------> */
         HBox hBoxTestButtons = new HBox();
 
-        Button testButton = new Button("Testing");
+        Button testButton = new Button("Test");
         testButton.addEventHandler(ActionEvent.ACTION, (event) -> {
             InfiniteGaugeData randomData = new InfiniteGaugeData(fuelGauge, speedGauge, RPMGauge, tempGauge);
             randomData.start();
