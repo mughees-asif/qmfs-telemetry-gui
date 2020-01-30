@@ -211,6 +211,7 @@ public class Main extends Application {
         /*<--------------------> Fuel Graph <--------------------> */
         fuelGraph = GaugeBuilder.create()
                 .skinType(Gauge.SkinType.TILE_SPARK_LINE)
+                .prefSize(200,200)
                 .foregroundBaseColor(Color.WHITE)
                 .needleColor(Color.RED)
                 .animated(true)
@@ -245,8 +246,19 @@ public class Main extends Application {
         /*<--------------------> Gauges - HBox <--------------------> */
         HBox hBoxGauges = new HBox(15);
 
-        hBoxGauges.getChildren().addAll(fuelGauge, fSpeedGauge, RPMGauge, tempGauge);
-        hBoxGauges.setPadding(new Insets(5, 20, 0, 0));
+        Image image = new Image(new FileInputStream("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg"));
+        ImageView imageView = new ImageView(image);
+        imageView.setX(50);
+        imageView.setY(50);
+        imageView.setFitHeight(225);
+        imageView.setFitWidth(225);
+        imageView.setPreserveRatio(true);
+
+        VBox vBoxImageFuel = new VBox(100);
+        vBoxImageFuel.getChildren().addAll(imageView, fuelGauge);
+        vBoxImageFuel.setPadding(new Insets(0, 20, 0, 20));
+
+        hBoxGauges.getChildren().addAll(vBoxImageFuel, fSpeedGauge, RPMGauge, tempGauge);
 
         HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
         HBox.setHgrow(fuelGauge, Priority.ALWAYS);
@@ -255,7 +267,7 @@ public class Main extends Application {
         hBoxGauges.setAlignment(Pos.CENTER);
 
         /*<--------------------> Read Button - HBox <--------------------> */
-        HBox hBoxReadButton = new HBox(500);
+        HBox hBoxButton = new HBox(15);
 
         Button readButton = new Button("Read");
         readButton.addEventHandler(ActionEvent.ACTION, (event) -> {
@@ -279,43 +291,41 @@ public class Main extends Application {
 
         readButton.getStyleClass().add("buttons");
         exitButton.getStyleClass().add("buttons");
-        hBoxReadButton.setPadding(new Insets(10, 10, 0, 10));
+        hBoxButton.setPadding(new Insets(20, 20, 0, 0));
+        HBox.setHgrow(hBoxButton, Priority.ALWAYS);
 
-        Image image = new Image(new FileInputStream("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg"));
-        ImageView imageView = new ImageView(image);
-        imageView.setX(50);
-        imageView.setY(50);
-        imageView.setFitHeight(250);
-        imageView.setFitWidth(250);
-        imageView.setPreserveRatio(true);
-
-        hBoxReadButton.getChildren().addAll(imageView, readButton, exitButton);
-        hBoxReadButton.setAlignment(Pos.CENTER);
+        hBoxButton.getChildren().addAll(readButton, exitButton);
+        hBoxButton.setAlignment(Pos.CENTER_RIGHT);
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
         // TODO: will be bottom of the BorderPane
-        // TODO: graphs at the bottom of the toggle button
         /*<------------------------------------------------------------------------> */
         VBox bottomVBox = new VBox(10);
 
-        HBox analysingGraphsHBox = new HBox(140);
+        HBox analysingGraphsHBox = new HBox(110);
         analysingGraphsHBox.getChildren().addAll(fuelGraph, speedGraph, RPMGraph, tempGraph);
         analysingGraphsHBox.setAlignment(Pos.CENTER);
 
         bottomVBox.getChildren().addAll(analysingGraphsHBox);
-        bottomVBox.setPadding(new Insets(10,10,30,10));
-        bottomVBox.setAlignment(Pos.CENTER);
+        analysingGraphsHBox.setPadding(new Insets(20,20,20,20));
+        analysingGraphsHBox.setAlignment(Pos.CENTER);
+        HBox.setHgrow(fuelGraph, Priority.ALWAYS);
+        HBox.setHgrow(speedGraph, Priority.ALWAYS);
+        HBox.setHgrow(RPMGraph, Priority.ALWAYS);
+        HBox.setHgrow(tempGraph, Priority.ALWAYS);
 
         /*<--------------------> Main layout - BorderPane <--------------------> */
         BorderPane borderPane = new BorderPane();
 
-        borderPane.setTop(hBoxReadButton);
+        borderPane.setTop(hBoxButton);
         borderPane.setCenter(hBoxGauges);
         borderPane.setBottom(bottomVBox);
         borderPane.getStyleClass().add("borderpane");
 
         /*<--------------------> Main Scene <--------------------> */
-        Scene scene = new Scene(borderPane, 1500, 775);
+        // TODO: fix main icon
+        /*<------------------------------------------------------> */
+        Scene scene = new Scene(borderPane, 1500, 750);
         scene.getStylesheets().add("sample/styles.css");
         stage.setTitle("Data Viewer - Queen Mary Formula Student\u00a9");
 //        stage.getIcons().add(new Image("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg"));
