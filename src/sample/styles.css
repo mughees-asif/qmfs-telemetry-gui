@@ -1,11 +1,12 @@
 .borderpane {
-    -fx-background-color: black;
+        -fx-background-image: url("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg");
+        -fx-background-image-size: cover;
+        -fx-background-color: black;
 }
 
 .buttons {
     -fx-font: 16 arial;
-    -fx-base: red;
-    -fx-text-fill: black;
+    -fx-base: blue;
+    -fx-text-fill: white;
     -fx-text-weight: bold;
-    -fx-focus-color: red;
 }

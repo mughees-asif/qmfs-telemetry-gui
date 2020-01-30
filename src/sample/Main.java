@@ -246,7 +246,7 @@ public class Main extends Application {
         HBox hBoxGauges = new HBox(15);
 
         hBoxGauges.getChildren().addAll(fuelGauge, fSpeedGauge, RPMGauge, tempGauge);
-        hBoxGauges.setPadding(new Insets(5, 20, 5, 0));
+        hBoxGauges.setPadding(new Insets(5, 20, 0, 0));
 
         HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
         HBox.setHgrow(fuelGauge, Priority.ALWAYS);
@@ -254,8 +254,8 @@ public class Main extends Application {
         HBox.setHgrow(RPMGauge, Priority.ALWAYS);
         hBoxGauges.setAlignment(Pos.CENTER);
 
-        /*<--------------------> Test Button - HBox <--------------------> */
-        HBox hBoxTestButtons = new HBox(10);
+        /*<--------------------> Read Button - HBox <--------------------> */
+        HBox hBoxReadButton = new HBox(500);
 
         Button readButton = new Button("Read");
         readButton.addEventHandler(ActionEvent.ACTION, (event) -> {
@@ -279,11 +279,18 @@ public class Main extends Application {
 
         readButton.getStyleClass().add("buttons");
         exitButton.getStyleClass().add("buttons");
+        hBoxReadButton.setPadding(new Insets(10, 10, 0, 10));
 
-        hBoxTestButtons.setPadding(new Insets(10, 10, 10, 10));
+        Image image = new Image(new FileInputStream("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg"));
+        ImageView imageView = new ImageView(image);
+        imageView.setX(50);
+        imageView.setY(50);
+        imageView.setFitHeight(250);
+        imageView.setFitWidth(250);
+        imageView.setPreserveRatio(true);
 
-        hBoxTestButtons.getChildren().addAll(readButton, exitButton);
-        hBoxTestButtons.setAlignment(Pos.CENTER);
+        hBoxReadButton.getChildren().addAll(imageView, readButton, exitButton);
+        hBoxReadButton.setAlignment(Pos.CENTER);
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
         // TODO: will be bottom of the BorderPane
@@ -291,36 +298,27 @@ public class Main extends Application {
         /*<------------------------------------------------------------------------> */
         VBox bottomVBox = new VBox(10);
 
-
-        Image image = new Image(new FileInputStream("C:/Users/fluxw/OneDrive/Pictures/graphsLabel.jpg"));
-
-        ImageView imageView = new ImageView(image);
-        imageView.setX(50);
-        imageView.setY(50);
-        imageView.setFitHeight(100);
-        imageView.setFitWidth(100);
-        imageView.setPreserveRatio(true);
-        imageView.getStyleClass();
-
-        HBox analysingGraphsHBox = new HBox(125);
+        HBox analysingGraphsHBox = new HBox(140);
         analysingGraphsHBox.getChildren().addAll(fuelGraph, speedGraph, RPMGraph, tempGraph);
         analysingGraphsHBox.setAlignment(Pos.CENTER);
 
-        bottomVBox.getChildren().addAll(imageView, analysingGraphsHBox);
-        bottomVBox.setPadding(new Insets(10,10,10,10));
+        bottomVBox.getChildren().addAll(analysingGraphsHBox);
+        bottomVBox.setPadding(new Insets(10,10,30,10));
         bottomVBox.setAlignment(Pos.CENTER);
 
         /*<--------------------> Main layout - BorderPane <--------------------> */
         BorderPane borderPane = new BorderPane();
-        borderPane.setTop(hBoxTestButtons);
+
+        borderPane.setTop(hBoxReadButton);
         borderPane.setCenter(hBoxGauges);
         borderPane.setBottom(bottomVBox);
         borderPane.getStyleClass().add("borderpane");
 
         /*<--------------------> Main Scene <--------------------> */
-        Scene scene = new Scene(borderPane, 1500, 750);
+        Scene scene = new Scene(borderPane, 1500, 775);
         scene.getStylesheets().add("sample/styles.css");
-        stage.setTitle("Telemetry System - QMFS");
+        stage.setTitle("Data Viewer - Queen Mary Formula Student\u00a9");
+//        stage.getIcons().add(new Image("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg"));
         stage.setScene(scene);
         stage.show();
 

@@ -217,3 +217,57 @@ Fuel: 2
 Temp: 83
 RPM: 8
 
+************* 10:55:29 pm, Thursday 30 January 2020*************
+Speed: 88
+Fuel: 9
+Temp: 31
+RPM: 3
+
+************* 10:55:30 pm, Thursday 30 January 2020*************
+Speed: 42
+Fuel: 5
+Temp: 71
+RPM: 12
+
+************* 10:55:31 pm, Thursday 30 January 2020*************
+Speed: 25
+Fuel: 1
+Temp: 64
+RPM: 13
+
+************* 10:55:32 pm, Thursday 30 January 2020*************
+Speed: 26
+Fuel: 9
+Temp: 8
+RPM: 7
+
+************* 10:55:33 pm, Thursday 30 January 2020*************
+Speed: 49
+Fuel: 4
+Temp: 69
+RPM: 15
+
+************* 10:55:34 pm, Thursday 30 January 2020*************
+Speed: 31
+Fuel: 7
+Temp: 83
+RPM: 12
+
+************* 10:55:35 pm, Thursday 30 January 2020*************
+Speed: 94
+Fuel: 5
+Temp: 87
+RPM: 2
+
+************* 11:15:19 pm, Thursday 30 January 2020*************
+Speed: 71
+Fuel: 9
+Temp: 69
+RPM: 15
+
+************* 11:15:20 pm, Thursday 30 January 2020*************
+Speed: 58
+Fuel: 3
+Temp: 7
+RPM: 13
+
