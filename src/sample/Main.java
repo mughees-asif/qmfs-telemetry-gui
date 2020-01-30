@@ -218,9 +218,9 @@ public class Main extends Application {
         HBox.setHgrow(RPMGauge, Priority.ALWAYS);
         hBoxGauges.setAlignment(Pos.CENTER);
 
-        /*<--------------------> Test Button - HBox <--------------------> */
+        /*<--------------------> Test Buttons - HBox <--------------------> */
         // clean up repeated code
-        // use generateRandom function to randomly keep generating 0 to a 100
+        // use generateRandom function to randomly keep generating 0 to a 100 values
         /*<------------------------------------------------------------> */
         HBox hBoxTestButtons = new HBox();
 
@@ -250,15 +250,15 @@ public class Main extends Application {
 
         /*<--------------------> Parameters displayed in text format - VBox <--------------------> */
         // yet to be completed
-        // will be right of the BorderPane
+        // will be bottom of the BorderPane
         // Three or more fields showing the GUI parameters in text
         /*<------------------------------------------------------------> */
         VBox vBoxParameterTextDisplay = new VBox();
 
-        /*<--------------------> Test Button HBox <--------------------> */
+        /*<--------------------> Analysing graph - StackPane <--------------------> */
         // yet to be completed
         // will be right of the BorderPane
-        // Three or more fields showing the GUI parameters in text
+        // Constantly updating graph to allow analysing of the data
         /*<------------------------------------------------------------> */
         StackPane paneAnalysingGraph = new StackPane();
 
