@@ -313,3 +313,579 @@ Fuel: 2
 Temp: 63
 RPM: 5
 
+************* 11:57:10 pm, Thursday 30 January 2020*************
+Speed: 1
+Fuel: 8
+Temp: 17
+RPM: 5
+
+************* 11:57:11 pm, Thursday 30 January 2020*************
+Speed: 52
+Fuel: 3
+Temp: 11
+RPM: 13
+
+************* 11:57:12 pm, Thursday 30 January 2020*************
+Speed: 73
+Fuel: 3
+Temp: 66
+RPM: 2
+
+************* 11:57:13 pm, Thursday 30 January 2020*************
+Speed: 45
+Fuel: 6
+Temp: 2
+RPM: 5
+
+************* 11:57:14 pm, Thursday 30 January 2020*************
+Speed: 71
+Fuel: 1
+Temp: 71
+RPM: 9
+
+************* 11:57:33 pm, Thursday 30 January 2020*************
+Speed: 17
+Fuel: 1
+Temp: 23
+RPM: 3
+
+************* 11:57:34 pm, Thursday 30 January 2020*************
+Speed: 7
+Fuel: 9
+Temp: 2
+RPM: 9
+
+************* 11:57:35 pm, Thursday 30 January 2020*************
+Speed: 17
+Fuel: 9
+Temp: 89
+RPM: 15
+
+************* 11:57:36 pm, Thursday 30 January 2020*************
+Speed: 82
+Fuel: 3
+Temp: 19
+RPM: 14
+
+************* 11:57:37 pm, Thursday 30 January 2020*************
+Speed: 85
+Fuel: 9
+Temp: 11
+RPM: 11
+
+************* 11:58:32 pm, Thursday 30 January 2020*************
+Speed: 32
+Fuel: 1
+Temp: 8
+RPM: 15
+
+************* 11:58:33 pm, Thursday 30 January 2020*************
+Speed: 36
+Fuel: 5
+Temp: 35
+RPM: 6
+
+************* 11:58:34 pm, Thursday 30 January 2020*************
+Speed: 79
+Fuel: 7
+Temp: 60
+RPM: 4
+
+************* 11:59:29 pm, Thursday 30 January 2020*************
+Speed: 50
+Fuel: 2
+Temp: 55
+RPM: 11
+
+************* 11:59:30 pm, Thursday 30 January 2020*************
+Speed: 11
+Fuel: 4
+Temp: 94
+RPM: 8
+
+************* 11:59:31 pm, Thursday 30 January 2020*************
+Speed: 27
+Fuel: 2
+Temp: 55
+RPM: 2
+
+************* 11:59:32 pm, Thursday 30 January 2020*************
+Speed: 66
+Fuel: 1
+Temp: 77
+RPM: 12
+
+************* 12:01:14 am, Friday 31 January 2020*************
+Speed: 23
+Fuel: 1
+Temp: 49
+RPM: 1
+
+************* 12:01:15 am, Friday 31 January 2020*************
+Speed: 72
+Fuel: 1
+Temp: 29
+RPM: 8
+
+************* 12:01:16 am, Friday 31 January 2020*************
+Speed: 66
+Fuel: 7
+Temp: 48
+RPM: 1
+
+************* 12:01:17 am, Friday 31 January 2020*************
+Speed: 60
+Fuel: 4
+Temp: 40
+RPM: 15
+
+************* 12:01:18 am, Friday 31 January 2020*************
+Speed: 81
+Fuel: 1
+Temp: 58
+RPM: 9
+
+************* 12:01:19 am, Friday 31 January 2020*************
+Speed: 75
+Fuel: 9
+Temp: 50
+RPM: 15
+
+************* 12:01:20 am, Friday 31 January 2020*************
+Speed: 69
+Fuel: 5
+Temp: 37
+RPM: 3
+
+************* 12:01:21 am, Friday 31 January 2020*************
+Speed: 75
+Fuel: 7
+Temp: 89
+RPM: 11
+
+************* 12:01:22 am, Friday 31 January 2020*************
+Speed: 24
+Fuel: 8
+Temp: 34
+RPM: 2
+
+************* 12:01:47 am, Friday 31 January 2020*************
+Speed: 54
+Fuel: 5
+Temp: 77
+RPM: 7
+
+************* 12:01:48 am, Friday 31 January 2020*************
+Speed: 2
+Fuel: 1
+Temp: 37
+RPM: 6
+
+************* 12:01:49 am, Friday 31 January 2020*************
+Speed: 62
+Fuel: 6
+Temp: 26
+RPM: 2
+
+************* 12:01:50 am, Friday 31 January 2020*************
+Speed: 20
+Fuel: 6
+Temp: 35
+RPM: 6
+
+************* 12:01:51 am, Friday 31 January 2020*************
+Speed: 16
+Fuel: 6
+Temp: 60
+RPM: 14
+
+************* 12:01:52 am, Friday 31 January 2020*************
+Speed: 4
+Fuel: 4
+Temp: 9
+RPM: 11
+
+************* 12:01:53 am, Friday 31 January 2020*************
+Speed: 29
+Fuel: 2
+Temp: 64
+RPM: 15
+
+************* 12:01:54 am, Friday 31 January 2020*************
+Speed: 15
+Fuel: 6
+Temp: 43
+RPM: 15
+
+************* 12:01:55 am, Friday 31 January 2020*************
+Speed: 43
+Fuel: 5
+Temp: 76
+RPM: 4
+
+************* 12:01:56 am, Friday 31 January 2020*************
+Speed: 42
+Fuel: 6
+Temp: 75
+RPM: 13
+
+************* 12:01:57 am, Friday 31 January 2020*************
+Speed: 75
+Fuel: 8
+Temp: 82
+RPM: 14
+
+************* 12:01:58 am, Friday 31 January 2020*************
+Speed: 11
+Fuel: 2
+Temp: 68
+RPM: 3
+
+************* 12:01:59 am, Friday 31 January 2020*************
+Speed: 71
+Fuel: 3
+Temp: 42
+RPM: 3
+
+************* 12:02:0 am, Friday 31 January 2020*************
+Speed: 63
+Fuel: 0
+Temp: 83
+RPM: 10
+
+************* 12:02:1 am, Friday 31 January 2020*************
+Speed: 22
+Fuel: 0
+Temp: 28
+RPM: 7
+
+************* 12:02:2 am, Friday 31 January 2020*************
+Speed: 98
+Fuel: 8
+Temp: 39
+RPM: 3
+
+************* 12:02:3 am, Friday 31 January 2020*************
+Speed: 72
+Fuel: 5
+Temp: 63
+RPM: 8
+
+************* 12:02:4 am, Friday 31 January 2020*************
+Speed: 40
+Fuel: 1
+Temp: 97
+RPM: 8
+
+************* 12:02:5 am, Friday 31 January 2020*************
+Speed: 30
+Fuel: 6
+Temp: 31
+RPM: 11
+
+************* 12:02:6 am, Friday 31 January 2020*************
+Speed: 14
+Fuel: 2
+Temp: 26
+RPM: 15
+
+************* 12:02:7 am, Friday 31 January 2020*************
+Speed: 25
+Fuel: 5
+Temp: 82
+RPM: 9
+
+************* 12:02:8 am, Friday 31 January 2020*************
+Speed: 73
+Fuel: 4
+Temp: 85
+RPM: 14
+
+************* 12:02:9 am, Friday 31 January 2020*************
+Speed: 30
+Fuel: 6
+Temp: 16
+RPM: 15
+
+************* 12:02:10 am, Friday 31 January 2020*************
+Speed: 29
+Fuel: 5
+Temp: 40
+RPM: 12
+
+************* 12:02:11 am, Friday 31 January 2020*************
+Speed: 54
+Fuel: 5
+Temp: 31
+RPM: 10
+
+************* 12:02:12 am, Friday 31 January 2020*************
+Speed: 85
+Fuel: 0
+Temp: 51
+RPM: 5
+
+************* 12:02:13 am, Friday 31 January 2020*************
+Speed: 2
+Fuel: 4
+Temp: 23
+RPM: 9
+
+************* 12:02:14 am, Friday 31 January 2020*************
+Speed: 57
+Fuel: 5
+Temp: 54
+RPM: 2
+
+************* 12:02:15 am, Friday 31 January 2020*************
+Speed: 69
+Fuel: 4
+Temp: 45
+RPM: 13
+
+************* 12:02:16 am, Friday 31 January 2020*************
+Speed: 43
+Fuel: 8
+Temp: 29
+RPM: 6
+
+************* 12:02:17 am, Friday 31 January 2020*************
+Speed: 28
+Fuel: 4
+Temp: 83
+RPM: 5
+
+************* 12:02:18 am, Friday 31 January 2020*************
+Speed: 37
+Fuel: 4
+Temp: 87
+RPM: 5
+
+************* 12:02:19 am, Friday 31 January 2020*************
+Speed: 98
+Fuel: 9
+Temp: 11
+RPM: 9
+
+************* 12:02:20 am, Friday 31 January 2020*************
+Speed: 49
+Fuel: 0
+Temp: 68
+RPM: 1
+
+************* 12:02:21 am, Friday 31 January 2020*************
+Speed: 7
+Fuel: 2
+Temp: 66
+RPM: 1
+
+************* 12:02:22 am, Friday 31 January 2020*************
+Speed: 23
+Fuel: 0
+Temp: 62
+RPM: 14
+
+************* 12:02:23 am, Friday 31 January 2020*************
+Speed: 31
+Fuel: 3
+Temp: 46
+RPM: 8
+
+************* 12:02:24 am, Friday 31 January 2020*************
+Speed: 22
+Fuel: 2
+Temp: 48
+RPM: 9
+
+************* 12:02:25 am, Friday 31 January 2020*************
+Speed: 78
+Fuel: 4
+Temp: 32
+RPM: 4
+
+************* 12:02:26 am, Friday 31 January 2020*************
+Speed: 37
+Fuel: 2
+Temp: 59
+RPM: 2
+
+************* 12:02:27 am, Friday 31 January 2020*************
+Speed: 51
+Fuel: 7
+Temp: 46
+RPM: 4
+
+************* 12:02:28 am, Friday 31 January 2020*************
+Speed: 2
+Fuel: 5
+Temp: 55
+RPM: 8
+
+************* 12:02:29 am, Friday 31 January 2020*************
+Speed: 56
+Fuel: 7
+Temp: 48
+RPM: 0
+
+************* 12:02:30 am, Friday 31 January 2020*************
+Speed: 90
+Fuel: 5
+Temp: 40
+RPM: 7
+
+************* 12:02:31 am, Friday 31 January 2020*************
+Speed: 31
+Fuel: 0
+Temp: 40
+RPM: 1
+
+************* 12:02:32 am, Friday 31 January 2020*************
+Speed: 16
+Fuel: 8
+Temp: 4
+RPM: 13
+
+************* 12:02:33 am, Friday 31 January 2020*************
+Speed: 82
+Fuel: 8
+Temp: 70
+RPM: 9
+
+************* 12:02:34 am, Friday 31 January 2020*************
+Speed: 30
+Fuel: 1
+Temp: 92
+RPM: 3
+
+************* 12:02:35 am, Friday 31 January 2020*************
+Speed: 66
+Fuel: 8
+Temp: 59
+RPM: 10
+
+************* 12:02:36 am, Friday 31 January 2020*************
+Speed: 92
+Fuel: 4
+Temp: 69
+RPM: 8
+
+************* 12:02:37 am, Friday 31 January 2020*************
+Speed: 47
+Fuel: 2
+Temp: 7
+RPM: 5
+
+************* 12:02:38 am, Friday 31 January 2020*************
+Speed: 68
+Fuel: 7
+Temp: 69
+RPM: 2
+
+************* 12:02:39 am, Friday 31 January 2020*************
+Speed: 45
+Fuel: 2
+Temp: 93
+RPM: 2
+
+************* 12:02:40 am, Friday 31 January 2020*************
+Speed: 36
+Fuel: 8
+Temp: 46
+RPM: 12
+
+************* 12:02:41 am, Friday 31 January 2020*************
+Speed: 29
+Fuel: 7
+Temp: 27
+RPM: 12
+
+************* 12:02:42 am, Friday 31 January 2020*************
+Speed: 47
+Fuel: 7
+Temp: 33
+RPM: 14
+
+************* 12:02:43 am, Friday 31 January 2020*************
+Speed: 1
+Fuel: 2
+Temp: 67
+RPM: 4
+
+************* 12:02:44 am, Friday 31 January 2020*************
+Speed: 91
+Fuel: 2
+Temp: 22
+RPM: 1
+
+************* 12:02:45 am, Friday 31 January 2020*************
+Speed: 21
+Fuel: 4
+Temp: 93
+RPM: 3
+
+************* 12:02:46 am, Friday 31 January 2020*************
+Speed: 17
+Fuel: 1
+Temp: 70
+RPM: 0
+
+************* 12:02:47 am, Friday 31 January 2020*************
+Speed: 9
+Fuel: 5
+Temp: 64
+RPM: 8
+
+************* 12:02:48 am, Friday 31 January 2020*************
+Speed: 62
+Fuel: 7
+Temp: 21
+RPM: 1
+
+************* 12:02:49 am, Friday 31 January 2020*************
+Speed: 14
+Fuel: 8
+Temp: 51
+RPM: 2
+
+************* 12:02:50 am, Friday 31 January 2020*************
+Speed: 23
+Fuel: 0
+Temp: 20
+RPM: 0
+
+************* 12:02:58 am, Friday 31 January 2020*************
+Speed: 36
+Fuel: 8
+Temp: 22
+RPM: 13
+
+************* 12:02:59 am, Friday 31 January 2020*************
+Speed: 37
+Fuel: 4
+Temp: 76
+RPM: 2
+
+************* 12:03:0 am, Friday 31 January 2020*************
+Speed: 7
+Fuel: 8
+Temp: 82
+RPM: 13
+
+************* 12:03:1 am, Friday 31 January 2020*************
+Speed: 31
+Fuel: 7
+Temp: 53
+RPM: 14
+
+************* 12:03:2 am, Friday 31 January 2020*************
+Speed: 40
+Fuel: 7
+Temp: 12
+RPM: 1
+
+************* 12:03:3 am, Friday 31 January 2020*************
+Speed: 2
+Fuel: 6
+Temp: 49
+RPM: 11
+

@@ -69,7 +69,7 @@ public class Main extends Application {
 
         /*<--------------------> SpeedGauge <--------------------> */
         speedGauge = GaugeBuilder.create()
-                .prefSize(150, 350)
+                .prefSize(125, 175)
                 .foregroundBaseColor(Color.WHITE)
                 .title("Speedometer")
                 .unit("Km/h")
@@ -126,7 +126,7 @@ public class Main extends Application {
         /*<--------------------> FGauge Skin for SpeedGauge <--------------------> */
         fSpeedGauge = FGaugeBuilder
                 .create()
-                .prefSize(150, 350)
+                .prefSize(125, 175)
                 .gauge(speedGauge)
                 .gaugeDesign(GaugeDesign.METAL)
                 .gaugeBackground(GaugeDesign.GaugeBackground.CARBON)
@@ -137,7 +137,7 @@ public class Main extends Application {
         RPMGauge = GaugeBuilder.create()
                 .skinType(Gauge.SkinType.SIMPLE)
                 .subTitle("\tx1000 rev/min")
-                .prefSize(150,200)
+                .prefSize(125,175)
                 .sections(new Section(0, 8, "0", Color.web("#FFFFFF")),
                         new Section(8, 10, "1", Color.web("#FFCCCC")),
                         new Section(10, 12, "2", Color.web("#FF9999")),
@@ -158,7 +158,7 @@ public class Main extends Application {
         fuelGauge = GaugeBuilder.create()
                 .title("Fuel")
                 .skinType(Gauge.SkinType.HORIZONTAL)
-                .prefSize(80, 100)
+                .prefSize(150, 200)
                 .foregroundBaseColor(Color.WHITESMOKE)
                 .animated(true)
                 .shadowsEnabled(true)
@@ -180,7 +180,7 @@ public class Main extends Application {
         /*<--------------------> Temperature Gauge <--------------------> */
          tempGauge = GaugeBuilder.create()
                  .skinType(Gauge.SkinType.LCD)
-                 .prefSize(25,10)
+                 .prefSize(15,5)
                  .animated(true)
                  .title("Temperature")
                  .subTitle("Engine")
@@ -200,7 +200,6 @@ public class Main extends Application {
         speedGraph = GaugeBuilder.create()
                 .skinType(Gauge.SkinType.TILE_SPARK_LINE)
                 .foregroundBaseColor(Color.WHITE)
-                .needleColor(Color.RED)
                 .animated(true)
                 .maxValue(100)
                 .minValue(0)
@@ -211,11 +210,12 @@ public class Main extends Application {
         /*<--------------------> Fuel Graph <--------------------> */
         fuelGraph = GaugeBuilder.create()
                 .skinType(Gauge.SkinType.TILE_SPARK_LINE)
-                .prefSize(200,200)
                 .foregroundBaseColor(Color.WHITE)
                 .needleColor(Color.RED)
                 .animated(true)
                 .threshold(75)
+                .foregroundBaseColor(Color.BLACK)
+                .backgroundPaint(Color.LIGHTBLUE)
                 .title("Fuel")
                 .build();
 
@@ -236,6 +236,8 @@ public class Main extends Application {
                 .needleColor(Color.RED)
                 .animated(true)
                 .threshold(75)
+                .foregroundBaseColor(Color.BLACK)
+                .backgroundPaint(Color.LIGHTBLUE)
                 .title("Temperature")
                 .build();
 
@@ -250,16 +252,16 @@ public class Main extends Application {
         ImageView imageView = new ImageView(image);
         imageView.setX(50);
         imageView.setY(50);
-        imageView.setFitHeight(225);
-        imageView.setFitWidth(225);
+        imageView.setFitHeight(250);
+        imageView.setFitWidth(250);
         imageView.setPreserveRatio(true);
 
-        VBox vBoxImageFuel = new VBox(100);
+        VBox vBoxImageFuel = new VBox(75);
         vBoxImageFuel.getChildren().addAll(imageView, fuelGauge);
         vBoxImageFuel.setPadding(new Insets(0, 20, 0, 20));
 
         hBoxGauges.getChildren().addAll(vBoxImageFuel, fSpeedGauge, RPMGauge, tempGauge);
-
+        hBoxGauges.setPadding(new Insets(0, 20, 0, 20));
         HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
         HBox.setHgrow(fuelGauge, Priority.ALWAYS);
         HBox.setHgrow(tempGauge, Priority.ALWAYS);
