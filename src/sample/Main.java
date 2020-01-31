@@ -301,6 +301,7 @@ public class Main extends Application {
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
         // TODO: will be bottom of the BorderPane
+        // TODO: add lines b/w the graphs
         /*<------------------------------------------------------------------------> */
         VBox bottomVBox = new VBox(10);
 
@@ -326,6 +327,7 @@ public class Main extends Application {
 
         /*<--------------------> Main Scene <--------------------> */
         // TODO: fix main icon
+        // TODO: set CustomStage --> https://github.com/Oshan96/CustomStage
         /*<------------------------------------------------------> */
         Scene scene = new Scene(borderPane, 1500, 750);
         scene.getStylesheets().add("sample/styles.css");
