@@ -1,7 +1,7 @@
 module TelemetrySystem.FS {
     requires javafx.controls;
     requires javafx.fxml;
-    requires Medusa;
+    requires eu.hansolo.medusa;
 
     opens sample;
 }

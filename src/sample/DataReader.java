@@ -8,7 +8,7 @@ public class DataReader {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader in = new BufferedReader(new FileReader("C:/Users/fluxw/OneDrive/Desktop/TelemetrySystem_FS/input.txt"));
+        BufferedReader in = new BufferedReader(new FileReader("input.txt"));
         String line = in.readLine();
         while (line != null) {
             System.out.println(line);
