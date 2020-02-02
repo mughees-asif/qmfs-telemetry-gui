@@ -16,8 +16,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
-import lk.vivoxalabs.customstage.CustomStage;
-import lk.vivoxalabs.customstage.CustomStageBuilder;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -331,22 +329,21 @@ public class Main extends Application {
         // TODO: fix main icon
         // TODO: set CustomStage --> https://github.com/Oshan96/CustomStage
         /*<------------------------------------------------------> */
-
-//        scene.getStylesheets().add("sample/styles.css");
-//        stage.setTitle("Data Viewer - Queen Mary Formula Student\u00a9");
-////        stage.getIcons().add(new Image("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg"));
-//        stage.setScene(scene);
-//        stage.show();
-
         Scene scene = new Scene(borderPane, 1500, 800);
-        CustomStage primaryStage = new CustomStageBuilder()
-                .setIcon("QMFSLogo1.png")
-                .setWindowTitle("Data Viewer - QMFS\\u00a9")
-                .setTitleColor("#FFFFFF")
-                .setWindowColor("rgb(34,54,122)")
-                .build();
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        scene.getStylesheets().add("sample/styles.css");
+        stage.setTitle("Data Viewer - QMFS\u00a9");
+//        stage.getIcons().add(new Image("C:/Users/fluxw/OneDrive/Desktop/Formula Student '19 - '20/TelemetrySystem_FS/QMFSLogo1.png"));
+        stage.setScene(scene);
+        stage.show();
+
+//        CustomStageBuilder builder = new CustomStageBuilder();
+//        builder = builder.setWindowTitle("CustomStage example");
+//        builder = builder.setTitleColor("black");
+//        builder=builder.setWindowColor("black"); //color can be name, hex or rgb value
+//        CustomStage primaryStage = builder.build();
+//
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
 
     }
 

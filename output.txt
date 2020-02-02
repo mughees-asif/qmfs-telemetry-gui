@@ -256,3 +256,45 @@ Fuel: 4
 Temp: 68
 RPM: 1
 
+************* 8:58:42 pm, Sunday 02 February 2020*************
+Speed: 79
+Fuel: 2
+Temp: 28
+RPM: 15
+
+************* 8:58:43 pm, Sunday 02 February 2020*************
+Speed: 32
+Fuel: 8
+Temp: 20
+RPM: 15
+
+************* 8:58:44 pm, Sunday 02 February 2020*************
+Speed: 5
+Fuel: 6
+Temp: 78
+RPM: 6
+
+************* 8:58:45 pm, Sunday 02 February 2020*************
+Speed: 24
+Fuel: 5
+Temp: 58
+RPM: 0
+
+************* 8:58:46 pm, Sunday 02 February 2020*************
+Speed: 16
+Fuel: 3
+Temp: 8
+RPM: 6
+
+************* 8:58:47 pm, Sunday 02 February 2020*************
+Speed: 3
+Fuel: 4
+Temp: 73
+RPM: 10
+
+************* 8:58:48 pm, Sunday 02 February 2020*************
+Speed: 96
+Fuel: 9
+Temp: 48
+RPM: 9
+
