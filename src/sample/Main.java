@@ -287,6 +287,12 @@ public class Main extends Application {
         });
 
         Button cancelButton = new Button("Cancel");
+        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> {
+            InfiniteGaugeData randomData = new InfiniteGaugeData(
+                    fuelGauge, speedGauge, RPMGauge, tempGauge,
+                    fuelGraph, speedGraph, RPMGraph, tempGraph);
+            randomData.stopRandom();
+        });
 
         Button exitButton = new Button("Exit");
         exitButton.addEventHandler(ActionEvent.ACTION, (event) -> {

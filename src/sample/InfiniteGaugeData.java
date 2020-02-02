@@ -32,7 +32,7 @@ class InfiniteGaugeData implements Runnable {
     }
 
     public void run() {
-        new Timer().schedule(new TimerTask() {
+         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
                 int speed = generateRandom(100);
@@ -65,9 +65,12 @@ class InfiniteGaugeData implements Runnable {
                     e.printStackTrace();
                 }
             }
-        }, 1000);
+        }, 0);
     }
 
     void start() {
+    }
+    void cancel() {
+
     }
 }
