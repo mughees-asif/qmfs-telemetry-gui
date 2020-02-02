@@ -271,7 +271,7 @@ public class Main extends Application {
         /*<--------------------> Read Button - HBox <--------------------> */
         HBox hBoxButton = new HBox(15);
 
-        Button readButton = new Button("Read");
+        Button readButton = new Button("Start");
         readButton.addEventHandler(ActionEvent.ACTION, (event) -> {
             InfiniteGaugeData randomData = new InfiniteGaugeData(
                     fuelGauge, speedGauge, RPMGauge, tempGauge,
@@ -286,17 +286,20 @@ public class Main extends Application {
             }, 0, 1000);
         });
 
+        Button cancelButton = new Button("Cancel");
+
         Button exitButton = new Button("Exit");
         exitButton.addEventHandler(ActionEvent.ACTION, (event) -> {
-            stop();
+                System.exit(0);
         });
 
         readButton.getStyleClass().add("buttons");
+        cancelButton.getStyleClass().add("buttons");
         exitButton.getStyleClass().add("buttons");
         hBoxButton.setPadding(new Insets(20, 20, 0, 0));
         HBox.setHgrow(hBoxButton, Priority.ALWAYS);
 
-        hBoxButton.getChildren().addAll(readButton, exitButton);
+        hBoxButton.getChildren().addAll(readButton, cancelButton, exitButton);
         hBoxButton.setAlignment(Pos.CENTER_RIGHT);
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
@@ -345,11 +348,6 @@ public class Main extends Application {
 //        primaryStage.setScene(scene);
 //        primaryStage.show();
 
-    }
-
-    @Override
-    public void stop() {
-        System.exit(0);
     }
 
     public static void main(String[] args) {

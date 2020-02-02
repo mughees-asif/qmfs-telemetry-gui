@@ -26,7 +26,7 @@ class InfiniteGaugeData implements Runnable {
 
     }
 
-    /*<--------------------> Generate random number from 0 to a 100 - for unit testing <--------------------> */
+    /*<--------------------> Generate random number from 0 to a 100 - for testing <--------------------> */
     private int generateRandom(int limit) {
         return new Random().nextInt(limit);
     }
@@ -65,7 +65,7 @@ class InfiniteGaugeData implements Runnable {
                     e.printStackTrace();
                 }
             }
-        }, 0);
+        }, 1000);
     }
 
     void start() {
