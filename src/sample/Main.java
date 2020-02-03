@@ -291,7 +291,7 @@ public class Main extends Application {
             InfiniteGaugeData randomData = new InfiniteGaugeData(
                     fuelGauge, speedGauge, RPMGauge, tempGauge,
                     fuelGraph, speedGraph, RPMGraph, tempGraph);
-            randomData.stopRandom();
+//            randomData.stopRandom();
         });
 
         Button exitButton = new Button("Exit");
