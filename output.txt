@@ -298,3 +298,693 @@ Fuel: 7
 Temp: 1
 RPM: 5
 
+************* 1:55:29 pm, Monday 03 February 2020*************
+Speed: 34
+Fuel: 8
+Temp: 15
+RPM: 10
+
+************* 1:55:30 pm, Monday 03 February 2020*************
+Speed: 97
+Fuel: 0
+Temp: 50
+RPM: 6
+
+************* 1:55:31 pm, Monday 03 February 2020*************
+Speed: 18
+Fuel: 3
+Temp: 53
+RPM: 15
+
+************* 1:57:18 pm, Monday 03 February 2020*************
+Speed: 96
+Fuel: 9
+Temp: 31
+RPM: 10
+
+************* 1:57:19 pm, Monday 03 February 2020*************
+Speed: 14
+Fuel: 8
+Temp: 79
+RPM: 15
+
+************* 1:57:20 pm, Monday 03 February 2020*************
+Speed: 14
+Fuel: 4
+Temp: 68
+RPM: 11
+
+************* 1:57:21 pm, Monday 03 February 2020*************
+Speed: 76
+Fuel: 7
+Temp: 33
+RPM: 14
+
+************* 1:57:22 pm, Monday 03 February 2020*************
+Speed: 69
+Fuel: 9
+Temp: 8
+RPM: 3
+
+************* 1:57:23 pm, Monday 03 February 2020*************
+Speed: 21
+Fuel: 0
+Temp: 13
+RPM: 11
+
+************* 1:57:24 pm, Monday 03 February 2020*************
+Speed: 36
+Fuel: 2
+Temp: 8
+RPM: 12
+
+************* 1:57:25 pm, Monday 03 February 2020*************
+Speed: 53
+Fuel: 3
+Temp: 49
+RPM: 0
+
+************* 1:57:26 pm, Monday 03 February 2020*************
+Speed: 27
+Fuel: 4
+Temp: 49
+RPM: 9
+
+************* 1:57:27 pm, Monday 03 February 2020*************
+Speed: 27
+Fuel: 3
+Temp: 34
+RPM: 11
+
+************* 1:57:28 pm, Monday 03 February 2020*************
+Speed: 75
+Fuel: 5
+Temp: 0
+RPM: 12
+
+************* 1:57:29 pm, Monday 03 February 2020*************
+Speed: 64
+Fuel: 3
+Temp: 40
+RPM: 9
+
+************* 1:57:30 pm, Monday 03 February 2020*************
+Speed: 28
+Fuel: 8
+Temp: 20
+RPM: 13
+
+************* 1:57:31 pm, Monday 03 February 2020*************
+Speed: 41
+Fuel: 7
+Temp: 21
+RPM: 13
+
+************* 1:57:32 pm, Monday 03 February 2020*************
+Speed: 26
+Fuel: 9
+Temp: 1
+RPM: 1
+
+************* 1:57:33 pm, Monday 03 February 2020*************
+Speed: 51
+Fuel: 7
+Temp: 96
+RPM: 12
+
+************* 1:57:34 pm, Monday 03 February 2020*************
+Speed: 37
+Fuel: 4
+Temp: 55
+RPM: 11
+
+************* 1:57:35 pm, Monday 03 February 2020*************
+Speed: 99
+Fuel: 2
+Temp: 91
+RPM: 5
+
+************* 1:57:36 pm, Monday 03 February 2020*************
+Speed: 3
+Fuel: 5
+Temp: 34
+RPM: 7
+
+************* 1:57:37 pm, Monday 03 February 2020*************
+Speed: 54
+Fuel: 7
+Temp: 98
+RPM: 0
+
+************* 1:57:38 pm, Monday 03 February 2020*************
+Speed: 37
+Fuel: 7
+Temp: 85
+RPM: 10
+
+************* 1:57:39 pm, Monday 03 February 2020*************
+Speed: 56
+Fuel: 0
+Temp: 34
+RPM: 0
+
+************* 1:57:40 pm, Monday 03 February 2020*************
+Speed: 84
+Fuel: 4
+Temp: 50
+RPM: 14
+
+************* 1:57:41 pm, Monday 03 February 2020*************
+Speed: 11
+Fuel: 5
+Temp: 38
+RPM: 8
+
+************* 1:57:42 pm, Monday 03 February 2020*************
+Speed: 89
+Fuel: 1
+Temp: 7
+RPM: 13
+
+************* 1:57:43 pm, Monday 03 February 2020*************
+Speed: 59
+Fuel: 4
+Temp: 15
+RPM: 13
+
+************* 1:57:44 pm, Monday 03 February 2020*************
+Speed: 5
+Fuel: 5
+Temp: 9
+RPM: 8
+
+************* 1:57:45 pm, Monday 03 February 2020*************
+Speed: 72
+Fuel: 7
+Temp: 34
+RPM: 9
+
+************* 1:57:46 pm, Monday 03 February 2020*************
+Speed: 75
+Fuel: 7
+Temp: 65
+RPM: 12
+
+************* 1:57:47 pm, Monday 03 February 2020*************
+Speed: 77
+Fuel: 7
+Temp: 9
+RPM: 2
+
+************* 4:30:54 pm, Tuesday 04 February 2020*************
+Speed: 54
+Fuel: 2
+Temp: 25
+RPM: 13
+
+************* 4:30:55 pm, Tuesday 04 February 2020*************
+Speed: 75
+Fuel: 1
+Temp: 78
+RPM: 4
+
+************* 4:30:56 pm, Tuesday 04 February 2020*************
+Speed: 29
+Fuel: 8
+Temp: 68
+RPM: 13
+
+************* 4:30:57 pm, Tuesday 04 February 2020*************
+Speed: 30
+Fuel: 9
+Temp: 91
+RPM: 10
+
+************* 4:30:58 pm, Tuesday 04 February 2020*************
+Speed: 94
+Fuel: 1
+Temp: 90
+RPM: 5
+
+************* 4:30:59 pm, Tuesday 04 February 2020*************
+Speed: 90
+Fuel: 7
+Temp: 6
+RPM: 10
+
+************* 4:31:0 pm, Tuesday 04 February 2020*************
+Speed: 49
+Fuel: 2
+Temp: 17
+RPM: 5
+
+************* 4:31:1 pm, Tuesday 04 February 2020*************
+Speed: 68
+Fuel: 4
+Temp: 90
+RPM: 8
+
+************* 4:31:2 pm, Tuesday 04 February 2020*************
+Speed: 7
+Fuel: 2
+Temp: 52
+RPM: 5
+
+************* 4:31:3 pm, Tuesday 04 February 2020*************
+Speed: 96
+Fuel: 6
+Temp: 12
+RPM: 9
+
+************* 4:31:4 pm, Tuesday 04 February 2020*************
+Speed: 83
+Fuel: 4
+Temp: 95
+RPM: 14
+
+************* 4:31:5 pm, Tuesday 04 February 2020*************
+Speed: 43
+Fuel: 1
+Temp: 43
+RPM: 12
+
+************* 4:31:6 pm, Tuesday 04 February 2020*************
+Speed: 82
+Fuel: 5
+Temp: 77
+RPM: 15
+
+************* 4:31:7 pm, Tuesday 04 February 2020*************
+Speed: 54
+Fuel: 7
+Temp: 47
+RPM: 2
+
+************* 4:31:8 pm, Tuesday 04 February 2020*************
+Speed: 7
+Fuel: 9
+Temp: 53
+RPM: 2
+
+************* 4:31:9 pm, Tuesday 04 February 2020*************
+Speed: 80
+Fuel: 0
+Temp: 8
+RPM: 2
+
+************* 4:32:16 pm, Tuesday 04 February 2020*************
+Speed: 37
+Fuel: 6
+Temp: 28
+RPM: 4
+
+************* 4:32:17 pm, Tuesday 04 February 2020*************
+Speed: 18
+Fuel: 1
+Temp: 61
+RPM: 15
+
+************* 4:32:18 pm, Tuesday 04 February 2020*************
+Speed: 45
+Fuel: 2
+Temp: 71
+RPM: 11
+
+************* 4:32:19 pm, Tuesday 04 February 2020*************
+Speed: 62
+Fuel: 9
+Temp: 39
+RPM: 2
+
+************* 4:32:20 pm, Tuesday 04 February 2020*************
+Speed: 59
+Fuel: 8
+Temp: 33
+RPM: 11
+
+************* 4:32:21 pm, Tuesday 04 February 2020*************
+Speed: 95
+Fuel: 3
+Temp: 3
+RPM: 12
+
+************* 4:32:22 pm, Tuesday 04 February 2020*************
+Speed: 96
+Fuel: 7
+Temp: 39
+RPM: 3
+
+************* 4:32:23 pm, Tuesday 04 February 2020*************
+Speed: 27
+Fuel: 5
+Temp: 47
+RPM: 2
+
+************* 4:32:24 pm, Tuesday 04 February 2020*************
+Speed: 56
+Fuel: 2
+Temp: 43
+RPM: 4
+
+************* 4:32:25 pm, Tuesday 04 February 2020*************
+Speed: 44
+Fuel: 1
+Temp: 45
+RPM: 8
+
+************* 4:32:26 pm, Tuesday 04 February 2020*************
+Speed: 88
+Fuel: 5
+Temp: 51
+RPM: 2
+
+************* 4:32:27 pm, Tuesday 04 February 2020*************
+Speed: 12
+Fuel: 7
+Temp: 86
+RPM: 3
+
+************* 4:32:28 pm, Tuesday 04 February 2020*************
+Speed: 60
+Fuel: 4
+Temp: 71
+RPM: 11
+
+************* 4:32:29 pm, Tuesday 04 February 2020*************
+Speed: 62
+Fuel: 5
+Temp: 3
+RPM: 5
+
+************* 4:32:30 pm, Tuesday 04 February 2020*************
+Speed: 9
+Fuel: 1
+Temp: 80
+RPM: 9
+
+************* 4:32:31 pm, Tuesday 04 February 2020*************
+Speed: 97
+Fuel: 0
+Temp: 51
+RPM: 5
+
+************* 4:32:32 pm, Tuesday 04 February 2020*************
+Speed: 18
+Fuel: 7
+Temp: 41
+RPM: 5
+
+************* 4:32:33 pm, Tuesday 04 February 2020*************
+Speed: 58
+Fuel: 9
+Temp: 20
+RPM: 1
+
+************* 4:32:34 pm, Tuesday 04 February 2020*************
+Speed: 65
+Fuel: 8
+Temp: 99
+RPM: 3
+
+************* 4:32:35 pm, Tuesday 04 February 2020*************
+Speed: 68
+Fuel: 6
+Temp: 94
+RPM: 15
+
+************* 4:32:36 pm, Tuesday 04 February 2020*************
+Speed: 18
+Fuel: 7
+Temp: 33
+RPM: 5
+
+************* 4:32:37 pm, Tuesday 04 February 2020*************
+Speed: 18
+Fuel: 6
+Temp: 13
+RPM: 11
+
+************* 4:32:38 pm, Tuesday 04 February 2020*************
+Speed: 46
+Fuel: 8
+Temp: 68
+RPM: 13
+
+************* 4:32:39 pm, Tuesday 04 February 2020*************
+Speed: 43
+Fuel: 7
+Temp: 83
+RPM: 12
+
+************* 4:32:40 pm, Tuesday 04 February 2020*************
+Speed: 7
+Fuel: 9
+Temp: 30
+RPM: 6
+
+************* 4:32:41 pm, Tuesday 04 February 2020*************
+Speed: 83
+Fuel: 6
+Temp: 74
+RPM: 2
+
+************* 4:32:42 pm, Tuesday 04 February 2020*************
+Speed: 3
+Fuel: 2
+Temp: 19
+RPM: 13
+
+************* 4:32:43 pm, Tuesday 04 February 2020*************
+Speed: 62
+Fuel: 6
+Temp: 17
+RPM: 10
+
+************* 4:32:44 pm, Tuesday 04 February 2020*************
+Speed: 27
+Fuel: 2
+Temp: 97
+RPM: 2
+
+************* 4:32:45 pm, Tuesday 04 February 2020*************
+Speed: 81
+Fuel: 1
+Temp: 15
+RPM: 7
+
+************* 4:32:46 pm, Tuesday 04 February 2020*************
+Speed: 95
+Fuel: 7
+Temp: 75
+RPM: 7
+
+************* 4:32:47 pm, Tuesday 04 February 2020*************
+Speed: 68
+Fuel: 4
+Temp: 69
+RPM: 1
+
+************* 4:32:48 pm, Tuesday 04 February 2020*************
+Speed: 24
+Fuel: 7
+Temp: 25
+RPM: 15
+
+************* 4:32:49 pm, Tuesday 04 February 2020*************
+Speed: 16
+Fuel: 3
+Temp: 9
+RPM: 14
+
+************* 4:32:50 pm, Tuesday 04 February 2020*************
+Speed: 80
+Fuel: 6
+Temp: 34
+RPM: 8
+
+************* 4:32:51 pm, Tuesday 04 February 2020*************
+Speed: 50
+Fuel: 4
+Temp: 62
+RPM: 8
+
+************* 4:32:52 pm, Tuesday 04 February 2020*************
+Speed: 99
+Fuel: 1
+Temp: 41
+RPM: 6
+
+************* 4:32:53 pm, Tuesday 04 February 2020*************
+Speed: 99
+Fuel: 7
+Temp: 88
+RPM: 15
+
+************* 4:32:54 pm, Tuesday 04 February 2020*************
+Speed: 25
+Fuel: 1
+Temp: 54
+RPM: 2
+
+************* 4:32:55 pm, Tuesday 04 February 2020*************
+Speed: 89
+Fuel: 3
+Temp: 95
+RPM: 8
+
+************* 4:32:56 pm, Tuesday 04 February 2020*************
+Speed: 36
+Fuel: 2
+Temp: 34
+RPM: 13
+
+************* 4:32:57 pm, Tuesday 04 February 2020*************
+Speed: 44
+Fuel: 1
+Temp: 30
+RPM: 2
+
+************* 4:32:58 pm, Tuesday 04 February 2020*************
+Speed: 64
+Fuel: 8
+Temp: 96
+RPM: 3
+
+************* 4:32:59 pm, Tuesday 04 February 2020*************
+Speed: 62
+Fuel: 0
+Temp: 69
+RPM: 5
+
+************* 4:33:0 pm, Tuesday 04 February 2020*************
+Speed: 42
+Fuel: 0
+Temp: 55
+RPM: 13
+
+************* 4:33:1 pm, Tuesday 04 February 2020*************
+Speed: 34
+Fuel: 1
+Temp: 0
+RPM: 14
+
+************* 4:33:2 pm, Tuesday 04 February 2020*************
+Speed: 37
+Fuel: 4
+Temp: 66
+RPM: 13
+
+************* 4:33:3 pm, Tuesday 04 February 2020*************
+Speed: 38
+Fuel: 8
+Temp: 33
+RPM: 4
+
+************* 4:33:4 pm, Tuesday 04 February 2020*************
+Speed: 43
+Fuel: 4
+Temp: 90
+RPM: 2
+
+************* 4:33:5 pm, Tuesday 04 February 2020*************
+Speed: 17
+Fuel: 6
+Temp: 17
+RPM: 1
+
+************* 4:33:6 pm, Tuesday 04 February 2020*************
+Speed: 94
+Fuel: 8
+Temp: 34
+RPM: 1
+
+************* 4:33:7 pm, Tuesday 04 February 2020*************
+Speed: 98
+Fuel: 9
+Temp: 23
+RPM: 6
+
+************* 4:33:8 pm, Tuesday 04 February 2020*************
+Speed: 48
+Fuel: 0
+Temp: 49
+RPM: 1
+
+************* 4:33:9 pm, Tuesday 04 February 2020*************
+Speed: 17
+Fuel: 2
+Temp: 59
+RPM: 13
+
+************* 4:33:10 pm, Tuesday 04 February 2020*************
+Speed: 62
+Fuel: 8
+Temp: 46
+RPM: 7
+
+************* 4:33:11 pm, Tuesday 04 February 2020*************
+Speed: 39
+Fuel: 2
+Temp: 1
+RPM: 3
+
+************* 4:33:12 pm, Tuesday 04 February 2020*************
+Speed: 0
+Fuel: 2
+Temp: 66
+RPM: 2
+
+************* 4:33:13 pm, Tuesday 04 February 2020*************
+Speed: 3
+Fuel: 6
+Temp: 72
+RPM: 6
+
+************* 4:33:14 pm, Tuesday 04 February 2020*************
+Speed: 56
+Fuel: 2
+Temp: 28
+RPM: 7
+
+************* 4:33:15 pm, Tuesday 04 February 2020*************
+Speed: 81
+Fuel: 1
+Temp: 29
+RPM: 11
+
+************* 4:33:16 pm, Tuesday 04 February 2020*************
+Speed: 37
+Fuel: 1
+Temp: 57
+RPM: 8
+
+************* 4:33:17 pm, Tuesday 04 February 2020*************
+Speed: 19
+Fuel: 9
+Temp: 68
+RPM: 11
+
+************* 4:33:18 pm, Tuesday 04 February 2020*************
+Speed: 79
+Fuel: 1
+Temp: 82
+RPM: 10
+
+************* 4:33:19 pm, Tuesday 04 February 2020*************
+Speed: 12
+Fuel: 0
+Temp: 1
+RPM: 9
+
+************* 4:33:20 pm, Tuesday 04 February 2020*************
+Speed: 25
+Fuel: 4
+Temp: 73
+RPM: 2
+
+************* 4:33:21 pm, Tuesday 04 February 2020*************
+Speed: 55
+Fuel: 8
+Temp: 96
+RPM: 8
+
