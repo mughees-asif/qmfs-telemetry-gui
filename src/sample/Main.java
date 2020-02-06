@@ -323,8 +323,6 @@ public class Main extends Application {
         borderPane.getStyleClass().add("borderpane");
 
         /*<--------------------> Main Scene <--------------------> */
-
-        /*<------------------------------------------------------> */
         Scene scene = new Scene(borderPane, 1500, 800);
         scene.getStylesheets().add("sample/styles.css");
         stage.setTitle("Data Viewer - QMFS\u00a9");
