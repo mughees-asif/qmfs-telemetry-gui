@@ -309,7 +309,6 @@ public class Main extends Application {
         hBoxButton.setAlignment(Pos.CENTER_RIGHT);
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
-        /*<------------------------------------------------------------------------> */
         VBox bottomVBox = new VBox(10);
 
         HBox analysingGraphsHBox = new HBox(110);
@@ -333,8 +332,7 @@ public class Main extends Application {
         borderPane.getStyleClass().add("borderpane");
 
         /*<--------------------> Main Scene <--------------------> */
-        // TODO: fix main icon
-        // TODO: set CustomStage --> https://github.com/Oshan96/CustomStage
+
         /*<------------------------------------------------------> */
         Scene scene = new Scene(borderPane, 1500, 800);
         scene.getStylesheets().add("sample/styles.css");
