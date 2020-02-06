@@ -70,7 +70,4 @@ class InfiniteGaugeData implements Runnable {
 
     void start() {
     }
-    void cancel() {
-
-    }
 }
