@@ -286,25 +286,17 @@ public class Main extends Application {
             }, 0, 1000);
         });
 
-        Button cancelButton = new Button("Cancel");
-        cancelButton.addEventHandler(ActionEvent.ACTION, (event) -> {
-            InfiniteGaugeData randomData = new InfiniteGaugeData(
-                    fuelGauge, speedGauge, RPMGauge, tempGauge,
-                    fuelGraph, speedGraph, RPMGraph, tempGraph);
-        });
-
         Button exitButton = new Button("Exit");
         exitButton.addEventHandler(ActionEvent.ACTION, (event) -> {
                 System.exit(0);
         });
 
         readButton.getStyleClass().add("buttons");
-        cancelButton.getStyleClass().add("buttons");
         exitButton.getStyleClass().add("buttons");
         hBoxButton.setPadding(new Insets(20, 20, 0, 0));
         HBox.setHgrow(hBoxButton, Priority.ALWAYS);
 
-        hBoxButton.getChildren().addAll(readButton, cancelButton, exitButton);
+        hBoxButton.getChildren().addAll(readButton, exitButton);
         hBoxButton.setAlignment(Pos.CENTER_RIGHT);
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
