@@ -309,8 +309,6 @@ public class Main extends Application {
         hBoxButton.setAlignment(Pos.CENTER_RIGHT);
 
         /*<--------------------> Analysing graphs - StackPane <--------------------> */
-        // TODO: will be bottom of the BorderPane
-        // TODO: add lines b/w the graphs
         /*<------------------------------------------------------------------------> */
         VBox bottomVBox = new VBox(10);
 
@@ -341,18 +339,8 @@ public class Main extends Application {
         Scene scene = new Scene(borderPane, 1500, 800);
         scene.getStylesheets().add("sample/styles.css");
         stage.setTitle("Data Viewer - QMFS\u00a9");
-//        stage.getIcons().add(new Image("C:/Users/fluxw/OneDrive/Desktop/Formula Student '19 - '20/TelemetrySystem_FS/QMFSLogo1.png"));
         stage.setScene(scene);
         stage.show();
-
-//        CustomStageBuilder builder = new CustomStageBuilder();
-//        builder = builder.setWindowTitle("CustomStage example");
-//        builder = builder.setTitleColor("black");
-//        builder=builder.setWindowColor("black"); //color can be name, hex or rgb value
-//        CustomStage primaryStage = builder.build();
-//
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
 
     }
 
