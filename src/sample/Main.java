@@ -27,7 +27,6 @@ import static eu.hansolo.medusa.TickLabelLocation.INSIDE;
 public class Main extends Application {
     private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge;
     private FGauge fSpeedGauge;
-
     private Gauge speedGraph, fuelGraph, RPMGraph, tempGraph;
 
     @Override
