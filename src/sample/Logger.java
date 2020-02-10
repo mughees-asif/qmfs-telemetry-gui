@@ -13,5 +13,6 @@ class Logger {
         PrintWriter out = new PrintWriter(new FileWriter("output.txt", true), true);
         out.write(message);
         out.close();
+
     }
 }
