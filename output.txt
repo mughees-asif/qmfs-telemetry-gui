@@ -1000,3 +1000,51 @@ Fuel: 1
 Temp: 65
 RPM: 14
 
+************* 9:05:1 pm, Monday 17 February 2020*************
+Speed: 10
+Fuel: 5
+Temp: 75
+RPM: 8
+
+************* 9:05:2 pm, Monday 17 February 2020*************
+Speed: 38
+Fuel: 3
+Temp: 32
+RPM: 2
+
+************* 9:05:3 pm, Monday 17 February 2020*************
+Speed: 13
+Fuel: 9
+Temp: 65
+RPM: 4
+
+************* 9:05:4 pm, Monday 17 February 2020*************
+Speed: 28
+Fuel: 0
+Temp: 15
+RPM: 11
+
+************* 9:05:5 pm, Monday 17 February 2020*************
+Speed: 60
+Fuel: 9
+Temp: 98
+RPM: 8
+
+************* 9:05:6 pm, Monday 17 February 2020*************
+Speed: 51
+Fuel: 7
+Temp: 19
+RPM: 1
+
+************* 9:05:7 pm, Monday 17 February 2020*************
+Speed: 79
+Fuel: 0
+Temp: 27
+RPM: 1
+
+************* 9:05:8 pm, Monday 17 February 2020*************
+Speed: 65
+Fuel: 2
+Temp: 63
+RPM: 4
+

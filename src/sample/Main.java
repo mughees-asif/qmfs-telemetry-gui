@@ -267,7 +267,7 @@ public class Main extends Application {
         HBox.setHgrow(RPMGauge, Priority.ALWAYS);
         hBoxGauges.setAlignment(Pos.CENTER);
 
-        /*<--------------------> Read Button - HBox <--------------------> */
+        /*<--------------------> Buttons - HBox <--------------------> */
         HBox hBoxButton = new HBox(15);
 
         Button readButton = new Button("Start");
