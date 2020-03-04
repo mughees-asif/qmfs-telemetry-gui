@@ -1048,3 +1048,105 @@ Fuel: 2
 Temp: 63
 RPM: 4
 
+************* 2:45:17 pm, Wednesday 04 March 2020*************
+Speed: 9
+Fuel: 3
+Temp: 96
+RPM: 11
+
+************* 2:45:18 pm, Wednesday 04 March 2020*************
+Speed: 33
+Fuel: 7
+Temp: 76
+RPM: 11
+
+************* 2:45:19 pm, Wednesday 04 March 2020*************
+Speed: 92
+Fuel: 8
+Temp: 31
+RPM: 13
+
+************* 2:45:20 pm, Wednesday 04 March 2020*************
+Speed: 45
+Fuel: 9
+Temp: 67
+RPM: 10
+
+************* 2:45:21 pm, Wednesday 04 March 2020*************
+Speed: 72
+Fuel: 2
+Temp: 61
+RPM: 8
+
+************* 2:45:22 pm, Wednesday 04 March 2020*************
+Speed: 41
+Fuel: 6
+Temp: 87
+RPM: 14
+
+************* 2:45:23 pm, Wednesday 04 March 2020*************
+Speed: 58
+Fuel: 4
+Temp: 84
+RPM: 0
+
+************* 2:45:24 pm, Wednesday 04 March 2020*************
+Speed: 13
+Fuel: 8
+Temp: 60
+RPM: 4
+
+************* 2:45:25 pm, Wednesday 04 March 2020*************
+Speed: 38
+Fuel: 8
+Temp: 86
+RPM: 10
+
+************* 2:47:14 pm, Wednesday 04 March 2020*************
+Speed: 11
+Fuel: 2
+Temp: 45
+RPM: 4
+
+************* 2:47:15 pm, Wednesday 04 March 2020*************
+Speed: 11
+Fuel: 8
+Temp: 6
+RPM: 13
+
+************* 2:47:16 pm, Wednesday 04 March 2020*************
+Speed: 59
+Fuel: 2
+Temp: 35
+RPM: 10
+
+************* 2:47:17 pm, Wednesday 04 March 2020*************
+Speed: 27
+Fuel: 8
+Temp: 46
+RPM: 7
+
+************* 2:47:18 pm, Wednesday 04 March 2020*************
+Speed: 14
+Fuel: 7
+Temp: 98
+RPM: 6
+
+************* 2:47:19 pm, Wednesday 04 March 2020*************
+Speed: 11
+Fuel: 9
+Temp: 1
+RPM: 4
+
+************* 2:47:20 pm, Wednesday 04 March 2020*************
+Speed: 8
+Fuel: 8
+Temp: 86
+RPM: 9
+
+************* 2:47:21 pm, Wednesday 04 March 2020*************
+Speed: 28
+Fuel: 9
+Temp: 40
+RPM: 11
+
