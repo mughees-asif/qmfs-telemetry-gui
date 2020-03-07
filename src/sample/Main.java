@@ -35,6 +35,8 @@ public class Main extends Application {
         /*<--------------------------------------------------> */
         /*<--------------------> Gauges <--------------------> */
         // TODO: Separate into different classes
+        // TODO: Make a new gauge for measuring G-FORCE
+        // TODO: Remove Speed gauge
         /*<--------------------------------------------------> */
         /*<--------------------------------------------------> */
 
