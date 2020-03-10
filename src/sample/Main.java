@@ -14,7 +14,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Stop;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -22,11 +21,8 @@ import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import static eu.hansolo.medusa.TickLabelLocation.INSIDE;
-
 public class Main extends Application {
-    private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge;
-    private FGauge fSpeedGauge;
+    private Gauge fuelGauge, RPMGauge, tempGauge;
     private Gauge speedGraph, fuelGraph, RPMGraph, tempGraph;
 
     @Override
@@ -36,103 +32,10 @@ public class Main extends Application {
         /*<--------------------> Gauges <--------------------> */
         // TODO: Separate into different classes
         // TODO: Make a new gauge for measuring G-FORCE
-        // TODO: Remove Speed gauge
         /*<--------------------------------------------------> */
         /*<--------------------------------------------------> */
 
-        /*<--------------------> Sections for SpeedGauge <--------------------> */
-        Section section1 = SectionBuilder.create()
-                .start(30)
-                .stop(70)
-                .color(Color.rgb(255, 200, 0, 0.7))
-                .build();
-
-        Section section2 = SectionBuilder.create()
-                .start(70)
-                .stop(100)
-                .color(Color.rgb(255, 0, 0, 0.7))
-                .build();
-
-        /*<--------------------> Markers for SpeedGauge <--------------------> */
-        Marker marker1 = MarkerBuilder.create()
-                .value(30)
-                .text("Marker 1")
-                .color(Color.HOTPINK)
-                .markerType(Marker.MarkerType.DOT)
-                .build();
-
-        Marker marker2 = MarkerBuilder.create()
-                .value(70)
-                .text("Marker 2")
-                .color(Color.CYAN)
-                .markerType(Marker.MarkerType.STANDARD)
-                .build();
-
-        /*<--------------------> SpeedGauge <--------------------> */
-        speedGauge = GaugeBuilder.create()
-                .prefSize(125, 175)
-                .foregroundBaseColor(Color.WHITE)
-                .title("Speedometer")
-                .unit("Km/h")
-                .decimals(2)
-                .lcdVisible(true)
-                .lcdDesign(LcdDesign.STANDARD)
-                .lcdFont(LcdFont.DIGITAL_BOLD)
-                .scaleDirection(Gauge.ScaleDirection.CLOCKWISE)
-                .minValue(0)
-                .maxValue(100)
-                .startAngle(320)
-                .angleRange(280)
-                .tickLabelDecimals(0)
-                .tickLabelLocation(INSIDE)
-                .tickLabelOrientation(TickLabelOrientation.ORTHOGONAL)
-                .tickLabelSections(section1, section2)
-                .tickLabelColor(Color.WHITE)
-                .tickMarkSectionsVisible(false)
-                .tickMarkSections(section1, section2)
-                .majorTickMarksVisible(true)
-                .majorTickMarkType(TickMarkType.TRAPEZOID)
-                .mediumTickMarksVisible(false)
-                .mediumTickMarkType(TickMarkType.LINE)
-                .minorTickMarksVisible(true)
-                .minorTickMarkType(TickMarkType.LINE)
-                .ledVisible(false)
-                .ledType(Gauge.LedType.STANDARD)
-                .ledColor(Color.rgb(255, 200, 0))
-                .ledBlinking(false)
-                .needleShape(Gauge.NeedleShape.ANGLED)
-                .needleSize(Gauge.NeedleSize.STANDARD)
-                .needleColor(Color.CRIMSON)
-                .startFromZero(false)
-                .returnToZero(false)
-                .knobType(Gauge.KnobType.METAL)
-                .knobColor(Color.LIGHTGRAY)
-                .interactive(true)
-                .thresholdVisible(true)
-                .threshold(50)
-                .thresholdColor(Color.RED)
-                .checkThreshold(true)
-                .gradientBarEnabled(true)
-                .gradientBarStops(new Stop(0.0, Color.BLUE),
-                        new Stop(0.25, Color.CYAN),
-                        new Stop(0.5, Color.LIME),
-                        new Stop(0.75, Color.YELLOW),
-                        new Stop(1.0, Color.RED))
-                .markersVisible(true)
-                .markers(marker1, marker2)
-                .animated(true)
-                .animationDuration(500)
-                .build();
-
-        /*<--------------------> FGauge Skin for SpeedGauge <--------------------> */
-        fSpeedGauge = FGaugeBuilder
-                .create()
-                .prefSize(125, 175)
-                .gauge(speedGauge)
-                .gaugeDesign(GaugeDesign.METAL)
-                .gaugeBackground(GaugeDesign.GaugeBackground.CARBON)
-                .foregroundVisible(true)
-                .build();
+        /*<--------------------> GForceGauge <--------------------> */
 
         /*<--------------------> RPM Gauge <--------------------> */
         RPMGauge = GaugeBuilder.create()
@@ -261,9 +164,8 @@ public class Main extends Application {
         vBoxImageFuel.getChildren().addAll(imageView, fuelGauge);
         vBoxImageFuel.setPadding(new Insets(0, 20, 0, 20));
 
-        hBoxGauges.getChildren().addAll(vBoxImageFuel, fSpeedGauge, RPMGauge, tempGauge);
+        hBoxGauges.getChildren().addAll(vBoxImageFuel, RPMGauge, tempGauge);
         hBoxGauges.setPadding(new Insets(0, 20, 0, 20));
-        HBox.setHgrow(fSpeedGauge, Priority.ALWAYS);
         HBox.setHgrow(fuelGauge, Priority.ALWAYS);
         HBox.setHgrow(tempGauge, Priority.ALWAYS);
         HBox.setHgrow(RPMGauge, Priority.ALWAYS);
@@ -275,8 +177,8 @@ public class Main extends Application {
         Button readButton = new Button("Start");
         readButton.addEventHandler(ActionEvent.ACTION, (event) -> {
             InfiniteGaugeData randomData = new InfiniteGaugeData(
-                    fuelGauge, speedGauge, RPMGauge, tempGauge,
-                    fuelGraph, speedGraph, RPMGraph, tempGraph);
+                    fuelGauge, RPMGauge, tempGauge,
+                    fuelGraph, RPMGraph, tempGraph);
             randomData.start();
 
             new Timer().schedule(new TimerTask() {
@@ -304,7 +206,7 @@ public class Main extends Application {
         VBox bottomVBox = new VBox(10);
 
         HBox analysingGraphsHBox = new HBox(110);
-        analysingGraphsHBox.getChildren().addAll(fuelGraph, speedGraph, RPMGraph, tempGraph);
+        analysingGraphsHBox.getChildren().addAll(fuelGraph, RPMGraph, tempGraph);
         analysingGraphsHBox.setAlignment(Pos.CENTER);
 
         bottomVBox.getChildren().addAll(analysingGraphsHBox);

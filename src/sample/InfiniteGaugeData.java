@@ -10,17 +10,17 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 class InfiniteGaugeData implements Runnable {
-    private Gauge fuelGauge, speedGauge, RPMGauge, tempGauge,
-            fuelGraph, speedGraph, RPMGraph, tempGraph;
+    private Gauge fuelGauge, RPMGauge, tempGauge,
+            fuelGraph, RPMGraph, tempGraph;
 
-    InfiniteGaugeData(Gauge fuelGauge, Gauge speedGauge, Gauge RPMGauge, Gauge tempGauge,
-                      Gauge fuelGraph, Gauge speedGraph, Gauge RPMGraph, Gauge tempGraph) {
+    InfiniteGaugeData(Gauge fuelGauge, Gauge RPMGauge, Gauge tempGauge,
+                      Gauge fuelGraph, Gauge RPMGraph, Gauge tempGraph) {
         this.fuelGauge = fuelGauge;
-        this.speedGauge = speedGauge;
+
         this.RPMGauge = RPMGauge;
         this.tempGauge = tempGauge;
         this.fuelGraph = fuelGraph;
-        this.speedGraph = speedGraph;
+
         this.RPMGraph = RPMGraph;
         this.tempGraph = tempGraph;
 
@@ -39,9 +39,6 @@ class InfiniteGaugeData implements Runnable {
                 int fuel = generateRandom(10);
                 int temp = generateRandom(100);
                 int rpm = generateRandom(16);
-
-                speedGauge.setValue(speed);
-                speedGraph.setValue(speed);
 
                 fuelGauge.setValue(fuel);
                 fuelGraph.setValue(fuel);
