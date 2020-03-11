@@ -36,6 +36,8 @@ public class Main extends Application {
         /*<--------------------------------------------------> */
 
         /*<--------------------> GForceGauge <--------------------> */
+        // use modern skin
+        
 
         /*<--------------------> RPM Gauge <--------------------> */
         RPMGauge = GaugeBuilder.create()
