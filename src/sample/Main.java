@@ -38,21 +38,23 @@ public class Main extends Application {
 
         /*<--------------------> GForceGauge <--------------------> */
         // use modern skin
-        gForceGauge = new Gauge().
-                setSkinType(Gauge.SkinType.MODERN).
-            gauge.setSkin(new ModernSkin(gauge));
-            gauge.setTitle("TITLE");
-            gauge.setUnit("UNIT");
-            gauge.setDecimals(0);
-            gauge.setValueColor(Color.WHITE);
-            gauge.setTitleColor(Color.WHITE);
-            gauge.setSubTitleColor(Color.WHITE);
-            gauge.setBarColor(Color.rgb(0, 214, 215));
-            gauge.setNeedleColor(Color.WHITE);
-            gauge.setThresholdColor(Color.rgb(204, 0, 0));
-            gauge.setTickLabelColor(Color.rgb(151, 151, 151));
-            gauge.setTickMarkColor(Color.BLACK);
-            gauge.setTickLabelOrientation(TickLabelOrientation.ORTHOGONAL);
+        gForceGauge = GaugeBuilder.create().
+                skinType(Gauge.SkinType.MODERN).
+                title("G-Force").
+                prefSize(100,100).
+                unit("")
+                .build();
+//            gauge.setUnit("UNIT");
+//            gauge.setDecimals(0);
+//            gauge.setValueColor(Color.WHITE);
+//            gauge.setTitleColor(Color.WHITE);
+//            gauge.setSubTitleColor(Color.WHITE);
+//            gauge.setBarColor(Color.rgb(0, 214, 215));
+//            gauge.setNeedleColor(Color.WHITE);
+//            gauge.setThresholdColor(Color.rgb(204, 0, 0));
+//            gauge.setTickLabelColor(Color.rgb(151, 151, 151));
+//            gauge.setTickMarkColor(Color.BLACK);
+//            gauge.setTickLabelOrientation(TickLabelOrientation.ORTHOGONAL);
 
 
 
