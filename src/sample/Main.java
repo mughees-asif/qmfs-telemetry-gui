@@ -1,6 +1,7 @@
 package sample;
 
 import eu.hansolo.medusa.*;
+import eu.hansolo.medusa.skins.ModernSkin;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
@@ -22,8 +23,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Main extends Application {
-    private Gauge fuelGauge, RPMGauge, tempGauge;
-    private Gauge speedGraph, fuelGraph, RPMGraph, tempGraph;
+    private Gauge fuelGauge, gForceGauge, RPMGauge, tempGauge;
+    private Gauge gForceGraph, fuelGraph, RPMGraph, tempGraph;
 
     @Override
     public void init() {
@@ -37,7 +38,23 @@ public class Main extends Application {
 
         /*<--------------------> GForceGauge <--------------------> */
         // use modern skin
-        
+        gForceGauge = new Gauge().
+                setSkinType(Gauge.SkinType.MODERN).
+            gauge.setSkin(new ModernSkin(gauge));
+            gauge.setTitle("TITLE");
+            gauge.setUnit("UNIT");
+            gauge.setDecimals(0);
+            gauge.setValueColor(Color.WHITE);
+            gauge.setTitleColor(Color.WHITE);
+            gauge.setSubTitleColor(Color.WHITE);
+            gauge.setBarColor(Color.rgb(0, 214, 215));
+            gauge.setNeedleColor(Color.WHITE);
+            gauge.setThresholdColor(Color.rgb(204, 0, 0));
+            gauge.setTickLabelColor(Color.rgb(151, 151, 151));
+            gauge.setTickMarkColor(Color.BLACK);
+            gauge.setTickLabelOrientation(TickLabelOrientation.ORTHOGONAL);
+
+
 
         /*<--------------------> RPM Gauge <--------------------> */
         RPMGauge = GaugeBuilder.create()
