@@ -1,7 +1,9 @@
 package sample;
 
-import eu.hansolo.medusa.*;
-import eu.hansolo.medusa.skins.ModernSkin;
+import eu.hansolo.medusa.Gauge;
+import eu.hansolo.medusa.GaugeBuilder;
+import eu.hansolo.medusa.LcdDesign;
+import eu.hansolo.medusa.Section;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
@@ -122,7 +124,7 @@ public class Main extends Application {
         /*<------------------------------------------------------------> */
 
         /*<--------------------> Speed graph <--------------------> */
-        speedGraph = GaugeBuilder.create()
+        gForceGraph = GaugeBuilder.create()
                 .skinType(Gauge.SkinType.TILE_SPARK_LINE)
                 .foregroundBaseColor(Color.WHITE)
                 .animated(true)
@@ -234,7 +236,7 @@ public class Main extends Application {
         analysingGraphsHBox.setPadding(new Insets(20,20,20,20));
         analysingGraphsHBox.setAlignment(Pos.CENTER);
         HBox.setHgrow(fuelGraph, Priority.ALWAYS);
-        HBox.setHgrow(speedGraph, Priority.ALWAYS);
+        HBox.setHgrow(gForceGraph, Priority.ALWAYS);
         HBox.setHgrow(RPMGraph, Priority.ALWAYS);
         HBox.setHgrow(tempGraph, Priority.ALWAYS);
 
