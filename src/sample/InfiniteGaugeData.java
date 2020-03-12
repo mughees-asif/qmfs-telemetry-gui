@@ -9,6 +9,12 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+    /*<------------------------------------------------------------> */
+    /*<--------------------> DataLogger <--------------------> */
+    // TODO: Add GForce Gauge to generate random values b/w 1-3
+    /*<------------------------------------------------------------> */
+    /*<------------------------------------------------------------> */
+
 class InfiniteGaugeData implements Runnable {
     private Gauge fuelGauge, RPMGauge, tempGauge,
             fuelGraph, RPMGraph, tempGraph;
