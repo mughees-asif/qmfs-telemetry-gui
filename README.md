@@ -1,5 +1,9 @@
 # Graphcial User Interface (GUI) using [Medusa](https://github.com/HanSolo/Medusa) 
 
+<p align="center">
+  <img width="460" height="300" src="/images/qmfs1.png">
+</p>
+
 ## Telemetry System for [Queen Mary Formula Student](https://www.qmformulastudent.co.uk/)
 
 ### Set-up for [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows):
@@ -18,7 +22,7 @@
 
 6. [Customise](https://community.oracle.com/docs/DOC-992746) as needed and [export](https://www.jetbrains.com/help/idea/packaging-javafx-applications.html) to windows as an executable file.
 
-7. Drop my GitHub in the README.md (Y).
+7. Drop my [GitHub](https://github.com/mughees-asif) in the README.md :+1:.
 
 
 
