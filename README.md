@@ -1,7 +1,7 @@
 # Graphcial User Interface (GUI) using [Medusa](https://github.com/HanSolo/Medusa) 
 
 <p align="center">
-  <img width="460" height="300" src="/images/qmfs1.png">
+  <img src="/images/qmfs1.png">
 </p>
 
 ## Telemetry System for [Queen Mary Formula Student](https://www.qmformulastudent.co.uk/)
