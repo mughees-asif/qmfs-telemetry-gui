@@ -3,13 +3,15 @@
   <img src="/images/qmfs1.png">
 </p>
 
-# Graphcial User Interface (GUI) using [Medusa](https://github.com/HanSolo/Medusa) 
+# Graphcial User Interface (GUI) for Motorsport  
 
 <p align="center">
   <img src="/images/QMFSLogo.jpg">
 </p>
 
 ## Telemetry System for [Queen Mary Formula Student](https://www.qmformulastudent.co.uk/)
+
+## Made using [Medusa](https://github.com/HanSolo/Medusa)
 
 ### Set-up for [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows):
 
