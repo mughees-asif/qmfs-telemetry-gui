@@ -238,3 +238,21 @@ Fuel: 4
 Temp: 51
 RPM: 8
 
+************* 11:04:11 pm, Sunday 05 April 2020*************
+Speed: 84
+Fuel: 7
+Temp: 66
+RPM: 8
+
+************* 11:04:12 pm, Sunday 05 April 2020*************
+Speed: 49
+Fuel: 3
+Temp: 66
+RPM: 5
+
+************* 11:04:13 pm, Sunday 05 April 2020*************
+Speed: 21
+Fuel: 8
+Temp: 2
+RPM: 9
+

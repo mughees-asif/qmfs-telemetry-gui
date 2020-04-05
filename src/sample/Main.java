@@ -175,7 +175,7 @@ public class Main extends Application {
         /*<--------------------> Gauges - HBox <--------------------> */
         HBox hBoxGauges = new HBox(15);
 
-        Image image = new Image(new FileInputStream("C:/Users/fluxw/OneDrive/Pictures/QMFSLogo.jpg"));
+        Image image = new Image(new FileInputStream("images/QMFSLogo.jpg"));
         ImageView imageView = new ImageView(image);
         imageView.setX(50);
         imageView.setY(50);
