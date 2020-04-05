@@ -3,7 +3,7 @@
   <img src="/images/qmfs1.png">
 </p>
 
-# Graphcial User Interface (GUI) for Motorsport  
+# Graphical User Interface (GUI) for Motorsport  
 
 <p align="center">
   <img src="/images/QMFSLogo.jpg">
