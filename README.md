@@ -11,7 +11,7 @@
 
 ## Telemetry System for [Queen Mary Formula Student](https://www.qmformulastudent.co.uk/)
 
-## Made using [Medusa](https://github.com/HanSolo/Medusa)
+## Made using the [Medusa](https://github.com/HanSolo/Medusa) library
 
 ### Set-up for [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows):
 
