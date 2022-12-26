@@ -20,7 +20,7 @@
 2. In the Get from Version Control dialog, specify the URL: 
 
 	````
-	https://github.com/mughees-asif/JavaFX-QMFS-TelemetrySystemGUI 
+	https://github.com/mughees-asif/qmfs-telemetry-gui 
 	````
 3. Test to make sure that connection to the remote can be established, or select one of the VCS hosting services on the left. If you are already logged in to the selected hosting service, completion will suggest the list of available repositories that you can clone.
 
